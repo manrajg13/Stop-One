@@ -5,3 +5,8 @@ form {
 	text-align: center;
 	min-height: 100vh;
 }
+
+.container {
+	border: 1px solid black;
+	padding: 15px;
+}
