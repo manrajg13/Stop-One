@@ -21,6 +21,7 @@ nav button {
 	background-color: #b4154f;
 	border: none;
 	border-radius: 5px;
+	color: white;
 }
 
 form button {
@@ -36,11 +37,24 @@ form button {
 }
 
 button:hover {
+	cursor: pointer;
 	filter: brightness(90%);
 }
 
+a {
+	height: 100%;
+	text-decoration: none;
+}
+
+p {
+	font-size: 14px;
+	font-weight: bold;
+	padding: 10px;
+}
+
 .logo {
-	height: 40px;
+	height: 41px;
+	border-radius: 5px;
 	width: auto;
 }
 
@@ -48,12 +62,12 @@ button:hover {
 	filter: brightness(90%);
 }
 
-.search-container{
+.search-container {
 	display: flex;
 }
 
 .search {
-	width: 500px;
+	width: 20vw;
 	padding: 12px 20px;
 	margin-left: 20px;
 	display: inline-block;
@@ -71,4 +85,54 @@ button:hover {
 	background-color: #b4154f;
 	width: 30px;
 	height: 100%;
+}
+
+.contents {
+	overflow: hidden;
+	margin: auto;
+	width: 60vw;
+	max-width: 750px;
+}
+
+.deals {
+	background-color: #f0ede6;
+	height: 200px;
+	margin: 5px;
+	width: calc(100% - 10px);
+}
+
+.items {
+	margin-top: 10px;
+	margin-bottom: -20px;
+	height: 300px;
+	width: 100%;
+	display: flex;
+	text-align: center;
+}
+.item {
+	width: 33%;
+	margin-left: 5px;
+	margin-right: 5px;
+	height: 250px;
+	background-color: #f0ede6;
+	padding: 15px;
+}
+
+.top {
+	margin-top: 20px;
+	height: 30px;
+	width: 100%;
+	background-color: #b4154f;
+	border: none;
+	color: white;
+}
+
+.misc {
+	width: 100%;
+	height: 200px;
+	background-color: #99063c;
+}
+
+#sign_in {
+	color: white;
 }

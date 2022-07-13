@@ -10,17 +10,42 @@
 		<link rel="shortcut icon" href="icon.gif">
 	<body>
 		<nav>
-			<img class="logo" src="assets/logo.png">
+			<a href="index.html"><img class="logo" src="assets/logo.png"></a>
 			<div class="search-container">
-			    <form class="search-bar">
+			    <form>
 			      	<input type="text" class="search" placeholder="Search..." name="search">
 			      	<button type="submit"><i class="fa fa-search" style="scale: 1.5; color: white;"></i></button>
 			    </form>
 		  	</div>
 
-		  	<button type="submit"><i class="fa fa-user" style="scale: 1.5; color: white;"></i></button>
-		  	<button type="submit"><i class="fa fa-gear" style="scale: 1.5; color: white;"></i></button>
-		  	<button type="submit"><i class="fa fa-shopping-cart" style="scale: 1.5; color: white;"></i></button>
+		  	<a href="#accounts"><button id="account"><i class="fa fa-user" style="scale: 1.5; color: white;"></i></button></a>
+		  	<a href="#settings"><button id="settings"><i class="fa fa-gear" style="scale: 1.5; color: white;"></i></button></a>
+		  	<a href="#cart"><button id="cart" href="#cart"><i class="fa fa-shopping-cart" style="scale: 1.5; color: white;"></i></button></a>
+
+		  	<a id="sign_in" href="login/login.html"><button>SIGN IN</button></a>
 		</nav>
+
+		<div class="contents">
+			<div class="deals">
+				<p>Today's Deals</p>
+			</div>
+
+			<div class="items">
+				<div class="item"><b>Store 1</b></div>
+				<div class="item"><b>Store 2</b></div>
+				<div class="item"><b>Store 3</b></div>
+			</div>
+
+			<div class="items">
+				<div class="item"><b>Product 1</b></div>
+				<div class="item"><b>Product 2</b></div>
+				<div class="item"><b>Product 3</b></div>
+			</div>
+		</div>
+
+		<a href="index.html"><button class="top">Back to top</button></a>
+		<div class="misc"></div>
+
+		<script type="text/javascript" src="script.js"></script>
 	</body>
 </head>
