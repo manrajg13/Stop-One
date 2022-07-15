@@ -1,3 +1,27 @@
+h1 {
+    text-align: center;
+    color: #b4154f;
+}
+
+p {
+    position: absolute;
+    color: #b4154f;
+    background-color: white;
+    bottom: 0;
+}
+
+.container {
+    position: relative; 
+    overflow: hidden;
+    height: 40vh;
+    width: 32%;
+    margin-bottom: 10px;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #b4154f;
+    border-radius: 10px;
+}
+
 .grid {
     display: flex;                       /* establish flex container */
     flex-wrap: wrap;                     /* enable flex items to wrap */
@@ -6,7 +30,43 @@
 
 .cell {
     flex: 0 0 32%;                       /* don't grow, don't shrink, width */
-    height: 50px;
+    text-align: center;
     margin-bottom: 5px;
     background-color: rgb(209, 209, 209);
+}
+
+#art-container {
+    background-image: url('../assets/background_images/art.jpg');
+}
+
+#athletics-container {
+    background-image: url('../assets/background_images/athletics.jpg');
+}
+
+#beauty-container {
+    background-image: url('../assets/background_images/beauty.jpg');
+}
+
+#entertainment-container {
+    background-image: url('../assets/background_images/entertainment.jpg');
+}
+
+#electronics-container {
+    background-image: url('../assets/background_images/electronics.jpg');
+}
+
+#fashion-container {
+    background-image: url('../assets/background_images/fashion.jpg');
+}
+
+#homemade-container {
+    background-image: url('../assets/background_images/homemade.jpg');
+}
+
+#outdoors-container {
+    background-image: url('../assets/background_images/outdoors.jpg');
+}
+
+#toys-container {
+    background-image: url('../assets/background_images/toys.jpg');
 }

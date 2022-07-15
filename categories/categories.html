@@ -7,40 +7,79 @@
 		<meta http-equiv="X-UA-Comptaible" content="ie=edge">
         <title>Categories</title>
         <link rel="stylesheet" href="categories.css">
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="shortcut icon" href="icon.gif">
     </head>
     <body>
+        <nav>
+			<a href="index.html"><img class="logo" src="../assets/logo.png"></a>
+			<div class="search-container">
+			    <form>
+			      	<input type="text" class="search" placeholder="Search..." name="search">
+			      	<button type="submit"><i class="fa fa-search" style="scale: 1.5; color: white;"></i></button>
+			    </form>
+		  	</div>
+		  	<a href="#accounts"><button id="account"><i class="fa fa-user" style="scale: 1.5; color: white;"></i></button></a>
+		  	<a href="#settings"><button id="settings"><i class="fa fa-gear" style="scale: 1.5; color: white;"></i></button></a>
+		  	<a href="#cart"><button id="cart" href="#cart"><i class="fa fa-shopping-cart" style="scale: 1.5; color: white;"></i></button></a>
+		  	<a id="sign_in" href="login/login.html"><button>SIGN IN</button></a>
+		</nav>
         <main>
             <h1>Categories</h1>
             <!--3x3 grid to display the categories-->
             <div class="grid">
-                <a class="cell" href="">
-                    <p>Here</p>
-                </a>
-                <a class="cell" href="">
-                    <p>Here</p>
-                </a>
-                <a class="cell" href="">
-                    <p>Here</p>
-                </a>
-                <a class="cell" href="">
-                    <p>Here</p>
-                </a>
-                <a class="cell" href="">
-                    <p>Here</p>
-                </a>
-                <a class="cell" href="">
-                    <p>Here</p>
-                </a>
-                <a class="cell" href="">
-                    <p>Here</p>
-                </a>
-                <a class="cell" href="">
-                    <p>Here</p>
-                </a>
-                <a class="cell" href="">
-                    <p>Here</p>
-                </a>
+                <div class="container" id="art-container">
+                    <a class="cell" href="">
+                        <p class="category-title">Art</p>
+                    </a>
+                </div>
+                <div class="container" id="athletics-container">
+                    <a class="cell" href="">
+                        <p class="category-title">Athletics</p>
+                    </a>
+                </div>
+                <div class="container" id="beauty-container">
+                    <a class="cell" href="">
+                        <p class="category-title">Beauty</p>
+                    </a>
+                </div>
+                <div class="container" id="entertainment-container">
+                    <a class="cell" href="">
+                        <p class="category-title">Entertainment</p>
+                    </a>
+                </div>
+                <div class="container" id="electronics-container">
+                    <a class="cell" href="">
+                        <p class="category-title">Electronics</p>
+                    </a>
+                </div> 
+                <div class="container" id="fashion-container">
+                    <a class="cell" href="">
+                        <p class="category-title">Fashion</p>
+                    </a>
+                </div>
+                <div class="container" id="homemade-container">
+                    <a class="cell" href="">
+                        <p class="category-title">Homemade</p>
+                    </a>
+                </div>
+                <div class="container" id="outdoors-container">
+                    <a class="cell" href="">
+                        <p class="category-title">Outdoors</p>
+                    </a>
+                </div>
+                <div class="container" id="toys-container">
+                    <a class="cell" href="">
+                        <p class="category-title">Toys and Children</p>
+                    </a>
+                </div>
             </div>
         </main>
+        <footer>
+            <a href="categories.html"><button class="top">Back to top</button></a>
+            <div class="misc"></div>
+        </footer>
+		<script type="text/javascript" src="../script.js"></script>
     </body>
 </html>
