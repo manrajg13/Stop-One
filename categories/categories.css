@@ -1,11 +1,11 @@
 h1 {
     text-align: center;
-    color: #b4154f;
+    color: var(--main-color);
 }
 
 p {
     position: absolute;
-    color: #b4154f;
+    color: var(--main-color);
     background-color: white;
     bottom: 0;
 }
@@ -18,7 +18,7 @@ p {
     margin-bottom: 10px;
     background-size: cover;
     background-position: center;
-    border: 2px solid #b4154f;
+    border: 2px solid var(--main-color);
     border-radius: 10px;
 }
 
