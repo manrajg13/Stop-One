@@ -140,3 +140,15 @@ p {
 #sign_in {
 	color: white;
 }
+
+#links {
+	width: calc(100% - 10px);
+	margin: auto;
+	background-color: var(--main-color);
+	border-radius: 10px;
+}
+
+#categories {
+	color: white;
+	text-align: center;
+}
