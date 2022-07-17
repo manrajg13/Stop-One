@@ -1,3 +1,7 @@
+:root {
+	--main-color: #b4154f;
+}
+
 body {
 	font-family: Verdana, sans-serif;
 	font-size: 12px;
