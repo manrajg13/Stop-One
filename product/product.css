@@ -61,6 +61,15 @@ i {
 	color: white;
 }
 
+hr {
+	background-color: #adadad;
+    border: 0 none;
+    color: #eee;
+    height: 1px;
+    position: relative;
+    bottom: 10px;
+}
+
 .logo {
 	height: 41px;
 	border-radius: 5px;
@@ -93,54 +102,29 @@ i {
 	max-width: 750px;
 }
 
-.deals {
-	background-color: #f0ede6;
-	height: 200px;
-	margin: 5px;
-	width: calc(100% - 10px);
+.product-img {
+	width: 100%
 }
 
-.items {
-	margin-top: 10px;
-	margin-bottom: -20px;
-	height: 300px;
-	width: 100%;
-	display: flex;
-	text-align: center;
-}
-.item {
-	width: 33%;
-	margin-left: 5px;
-	margin-right: 5px;
-	height: 250px;
-	background-color: #f0ede6;
-	padding: 15px;
+.price {
+	display: block;
 }
 
-.top {
-	margin-top: 20px;
-	height: 30px;
-	width: 100%;
+.purchase {
 	background-color: #b4154f;
-	border: none;
 	color: white;
+	padding: 5px;
+	margin-right: 3px;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	width: 20%;
+	float: right;
 }
 
-.misc {
-	width: 100%;
-	height: 200px;
-	background-color: #99063c;
-}
 
 #sign_in {
 	color: white;
-}
-
-#links {
-	width: calc(100% - 10px);
-	margin: auto;
-	background-color: var(--main-color);
-	border-radius: 10px;
 }
 
 #categories {
