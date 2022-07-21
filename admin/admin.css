@@ -1,13 +1,13 @@
+label {
+	font-size: 14px;
+	font-weight: bold;
+	padding: 10px;
+}
+
 .center {
     text-align: center;
 }
 
-.update-btn {
-    width: 10vw;
-    height: 5vh;
-    margin: auto;
-    background-color: var(--main-color);
-    color: white;
-    border: 1px solid var(--main-color);
-    border-radius: 10px;
+.contents {
+    height: 46vh;
 }
