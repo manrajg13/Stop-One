@@ -33,11 +33,7 @@ form button {
 	float: right;
 	height: 100%;
 	width: 60px;
-<<<<<<< HEAD
-	background-color: --main-color;
-=======
 	background-color: var(--main-color);
->>>>>>> bf5c7358b7765dabab717b1e44b965cd5632d686
 	border: none;
 	border-radius: 5px;
 	border-top-left-radius: 0px;
@@ -60,16 +56,14 @@ p {
 	padding: 10px;
 }
 
-<<<<<<< HEAD
 i {
 	scale: 1.35;
 	color: white;
-=======
+
 a p {
 	margin-bottom: 3%;
 	color: white;
 	text-align: center;
->>>>>>> bf5c7358b7765dabab717b1e44b965cd5632d686
 }
 
 .logo {
@@ -97,8 +91,6 @@ a p {
 	box-sizing: border-box;
 }
 
-<<<<<<< HEAD
-=======
 .account {
 	margin-left: 30px;
 	font-size: 16px;
@@ -109,7 +101,6 @@ a p {
 	height: 100%;
 }
 
->>>>>>> bf5c7358b7765dabab717b1e44b965cd5632d686
 .contents {
 	overflow: hidden;
 	margin: auto;
