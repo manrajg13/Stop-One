@@ -1,0 +1,490 @@
+/*common style*/
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?7kkyc2');
+    src: url('../fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?7kkyc2') format('truetype'), url('../fonts/icomoon.woff?7kkyc2') format('woff'), url('../fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.fr .icomoon {
+    font-family: 'icomoon';
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.style-red {
+    color: #c81623;
+}
+
+.spacer {
+    width: 1px;
+    height: 12px;
+    background-color: #666;
+    margin: 9px 12px 0;
+}
+
+.shortcut {
+    height: 31px;
+    background-color: #f1f1f1;
+    line-height: 31px;
+}
+
+.shortcut li {
+    float: left;
+}
+
+
+/*header*/
+
+.header {
+    position: relative;
+    height: 105px;
+}
+
+.logo {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 175px;
+    height: 56px;
+}
+
+.logo a {
+    display: block;
+    /*overflow: hidden;*/
+    width: 175px;
+    height: 56px;
+    background: url(../img/logo.png) no-repeat;
+    /*text-indent: -999px;*/
+    font-size: 0;
+}
+
+.search {
+    position: absolute;
+    top: 25px;
+    left: 348px;
+}
+
+.text {
+    float: left;
+    width: 445px;
+    height: 32px;
+    border: 2px solid #b1191a;
+    padding-left: 10px;
+    color: #ccc;
+}
+
+.btn {
+    float: left;
+    width: 82px;
+    height: 36px;
+    background-color: #b1191a;
+    border: 0;
+    font-size: 16px;
+    color: #fff;
+}
+
+.hotwrods {
+    position: absolute;
+    top: 65px;
+    left: 348px;
+}
+
+.hotwrods a {
+    margin: 0 10px;
+}
+
+.shopcart {
+    position: absolute;
+    top: 25px;
+    right: 64px;
+    width: 138px;
+    height: 34px;
+    border: 1px solid #dfdfdf;
+    background-color: #f7f7f7;
+    line-height: 34px;
+    text-align: center;
+}
+
+.cart {
+    font-family: 'icomoon';
+    color: #da5555;
+}
+
+.arrow {
+    font-family: 'icomoon';
+    margin-left: 5px;
+}
+
+.count {
+    position: absolute;
+    top: -5px;
+    left: 100px;
+    background-color: #e60012;
+    height: 14px;
+    padding: 0 8px;
+    line-height: 14px;
+    color: #fff;
+    /*border-radius: */
+    border-radius: 7px 7px 7px 0;
+}
+
+
+/*nav start*/
+
+.nav {
+    height: 45px;
+    border-bottom: 2px solid #b1191a;
+}
+
+.center {
+    position: relative;
+    margin-left: 234.5px;
+    margin-top: 20px;
+    width: 80%;
+    height: 500px;
+    background: url(../img/center.jpg);
+}
+
+.centertext {
+    position: absolute;
+    top: 150px;
+    left: 200px;
+    font-size: xx-large;
+    color: #c81623;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1{
+    color: #c81623;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: xx-large;
+    text-align: center;
+    margin: 20px;
+}
+
+ .navweb{
+    height:47px;
+    line-height:47px;
+    background-color: #da5555;
+}
+ .navweb li{
+    float:left;
+    padding:0px 3px;
+
+}
+ .navweb a{
+	width:73px;
+	height:47px;
+	display:block;
+	text-align:center;
+	color:#fff;
+	text-decoration:none;
+	font-weight:bold;
+}
+ .navweb a:hover{background:url(../img/menu2.gif) no-repeat;}
+ .navweb a.current{
+    margin-left: 300px;
+    background:url(../img/menu2.gif) no-repeat;
+    
+}
+ .navweb a.a1{width:85px;}
+ .navweb a.a1:hover{background:url(../img/menu1.gif) no-repeat;}
+
+
+  
+a:link,a:visited{color:#444;text-decoration:none;}
+a:hover{color:#ff0000;}
+
+
+/*clear padding and margin */
+
+* {
+    margin: 0;
+    padding: 0
+}
+
+
+/*font normal*/
+
+em,
+i {
+    font-style: normal;
+}
+
+
+/*no dot in front li*/
+
+li {
+    list-style: none;
+}
+
+
+/*no borader for images*/
+
+img {
+    border: 0;
+    /*ie6*/
+    vertical-align: middle;
+}
+
+
+/*change btn to hand*/
+
+button {
+    cursor: pointer;
+}
+
+
+/*no underline for links*/
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #e33333;
+}
+
+button,
+input {
+    font-family: 'Microsoft YaHei', 'Heiti SC', tahoma, arial, 'Hiragino Sans GB', \\5B8B\4F53, sans-serif;
+    /*no outline  for input*/
+    outline: none;
+}
+
+body {
+    background-color: #fff;
+    font: 12px/1.5 'Microsoft YaHei', 'Heiti SC', tahoma, arial, 'Hiragino Sans GB', \\5B8B\4F53, sans-serif;
+    color: #666
+}
+
+.hide,
+.none {
+    display: none;
+}
+
+
+/*no float*/
+
+.clearfix:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: ".";
+    height: 0
+}
+
+.clearfix {
+    *zoom: 1
+}
+
+/*3d rotate*/
+#tdnav, #tdnav1 {
+    margin-top: 110px;
+    perspective: 1000px;
+}
+section {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    margin: 50px auto;
+    transform-style: preserve-3d;
+    animation: rotate 10s linear infinite;
+}
+
+section:hover {
+    animation-play-state: paused;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotateY(0);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+section div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/dog.jpg) no-repeat;
+}
+section div a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+section div:nth-child(1) {
+    background: url(../img/book.jpg) no-repeat;
+    transform: rotateY(0) translateZ(300px);
+}
+
+section div:nth-child(2) {
+    background: url(../img/watch.jpg) no-repeat;
+    transform: rotateY(60deg) translateZ(300px);
+}
+
+section div:nth-child(3) {
+    background: url(../img/clothes.jpg) no-repeat;
+    transform: rotateY(120deg) translateZ(300px);
+}
+
+section div:nth-child(4) {
+    background: url(../img/food.jpg) no-repeat;
+
+    transform: rotateY(180deg) translateZ(300px);
+}
+
+section div:nth-child(5) {
+    background: url(../img/game.jpg) no-repeat;
+    transform: rotateY(240deg) translateZ(300px);
+}
+
+section div:nth-child(6) {
+    background: url(../img/toy.jpg) no-repeat;
+
+    transform: rotateY(300deg) translateZ(300px);
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 3px;
+    margin-top: 50px;
+  }
+footer div{
+    margin: 0;
+    padding: 0;
+}
+footer{
+   margin-left: 200px;
+    width: 1400px;
+    height: 250px;
+}
+footer div ul li{
+    list-style: none;
+    margin: 10px;
+}
+
+footer div{
+    width: 250px;
+    height: 200px;
+    float: left;
+    border: 0px solid red;
+}
+footer .div1{
+    margin-left: 150px;
+}
+
+footer .spacer{
+    border: 0px;
+    width: 50px;
+    height: 0px;
+}
+
+footer .low{
+    width: 1400px;
+    margin-top: 50px;
+    margin-left: 150px;
+    
+}
+footer .low .main{
+    width: 150px;
+    margin-left: 80px;
+}
+footer .low .main a{
+    padding-top: 70px;
+}
+
+footer .footerline{
+    width: 1200px;
+    margin-top: 30px;
+    margin-left: 300px;
+}
+footer .footerline ul li{
+    font-size: small;
+    display: block;
+    float: left;
+    width: 200px;
+    height: 10px;
+    line-height: 10px;
+}
+footer span{
+    float: left;
+}
+
+
+/*image move*/
+
+#div1{
+    position: relative;
+    border:1px solid #0ff;
+    width:1200px; 
+    height: 280px;
+    margin:20px auto 0;
+    overflow: hidden;
+  }
+      #div1 ul
+    {
+      position: absolute;
+      left: 0;
+    }
+      #div1 ul li{
+      list-style: none;
+      width:200px;
+      float: left;
+      padding: 10px;
+      height: 160px;}
+      #div1 ul li img{
+      width:100%;
+    }
+  #div1 ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  
+    #div2{
+      position: relative;
+      border:1px solid #0ff;
+      width:1200px; 
+      height: 280px;
+      margin:20px auto 0;
+      overflow: hidden;
+    }
+      #div2 ul
+      {
+        position: absolute;
+        left: 0;
+      }
+      #div2 ul li{
+        list-style: none;
+        width:200px;
+        float: left;
+        padding: 10px;
+        height: 160px;}
+      #div2 ul li img{
+        width:100%;
+      }
