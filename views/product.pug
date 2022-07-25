@@ -1,0 +1,40 @@
+html
+	head
+		title #{product.name}
+		link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css')
+	body
+		script(src="../product.js")
+		form(action="/products/" + product["_id"], method="POST")
+			div(class="position-absolute top-0 start-50" style="margin-top: 200px")
+				<h3 class="h3 mb-3 fw-normal">#{product.name}</h1>
+				|ID:
+				input#id(type="textbox" name="id" disabled value=product["_id"])
+				br
+				|Deleted:
+				input(type="textbox" name="hidden" disabled value=product.hidden)
+				br
+				|Name:
+				input(type="textbox" name="name" required value=product.name)
+				br
+				|Price:
+				input(type="textbox" name="price" required value=product.price)
+				br
+				|Stock:
+				input(type="textbox" name="stock" required value=product.stock)
+				br
+				|Deletion Comments:
+				if product.hidden==true
+					input(type="textbox" name="comments" value=product.comments)
+				else
+					input(type="textbox" name="comments" disabled value=product.comments)
+				br
+				div(class="row g-2" style={padding: '10px'})
+					button(type="submit" class="btn btn-primary" style={width: '45%', 'margin-right': '5px'} ) Save Changes
+					button(type="button" class="btn btn-danger" style={width: '50%'} onclick="deleteProduct()") Delete Product
+				br
+				div(class="row g-3")
+					br
+					button(type="button" class="btn btn-outline-danger" style={width: '50%'} onclick="undoDelete()") Undo Deletion
+					br
+					a(href="/products/"  style={width: '50%'})
+						button(type="button" class="btn btn-outline-secondary") View All Products

@@ -13,27 +13,17 @@ router.delete("/:uid", deleteUser);
 router.put("/:uid", undoDelete);
 
 function listUsers(req, res, next){
-	
-	mongoose.connection.db.collection("users").find({}).toArray(function(err, result){
-		if(err){
-			res.status(500).send("Error reading database.");
-			return;
-		}
-		console.log(result);
-		res.status(200).render("productlist", {products: result});
-	});
+	console.log("/users GET request received.");
 }
 
 function createNewUser(req, res, next){
-	let product = {};
+	let user = {};
 	
-	product.name = req.body.name;
-	product.price = Number(req.body.price);
-	product.stock = Number(req.body.stock);
-	product.hidden = false;
-	product.comments = "";
+	user.username = req.body.username;
+	user.email = req.body.email;
+	user.password = req.body.password;
 	
-	mongoose.connection.db.collection("users").insertOne(product, function(err, result){
+	mongoose.connection.db.collection("users").insertOne(user, function(err, result){
 		if(err){
 			res.status(500).send("Error saving to database.");
 			return;
@@ -41,12 +31,12 @@ function createNewUser(req, res, next){
 		let newID = result.insertedId;
 		
 		//Redirect to the view page for the new product
-		res.redirect("http://localhost:3000/products/" + newID);
+		res.redirect("http://localhost:3000/users/" + newID);
 	});
 }
 
 function readUser(req, res, next){
-	let id = req.params.pid;	
+	let id = req.params.uid;	
 	let oid;
 
 	try{
@@ -65,7 +55,7 @@ function readUser(req, res, next){
 			res.status(404).send("That ID does not exist in the database.");
 			return;
 		}
-		res.status(200).render("user", {product: result});
+		res.status(200).render("user", {user: result});
 	});
 }
 
