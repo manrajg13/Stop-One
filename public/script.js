@@ -13,6 +13,28 @@ window.onload = function () {
 	}
 }
 
+function deleteUser(){
+	try {
+		req = new XMLHttpRequest();
+		req.onreadystatechange = function() {
+			if(this.readyState==4 && this.status==200){
+				alert("User deleted successfully.");
+				window.location.href = "http://localhost:3000/";
+			} else if(this.readyState== 4 && this.status>400) {
+				alert("Oh no! Product failed to delete successfully. Try again");
+			}
+		}
+		let id = document.getElementById("id").value;
+		debugger
+		req.open("DELETE", `http://localhost:3000/users/${id}`);
+		req.send();
+	} catch (error) {
+		console.log('Unable to delete product')
+		console.error(error)
+	}
+
+}
+
 function deleteProduct(){
 	try {
 		req = new XMLHttpRequest();
@@ -35,7 +57,7 @@ function deleteProduct(){
 
 }
 
-function undoDelete(){
+function update(){
 	try {
 		req = new XMLHttpRequest();
 		req.onreadystatechange = function() {
