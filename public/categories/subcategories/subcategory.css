@@ -1,0 +1,21 @@
+.subcategory {
+    width: 70%;
+    margin: auto;
+    margin-bottom: 2%;
+    border: 2px solid var(--main-color);
+    border-radius: 50px;
+    /* Generated using: https://shadows.brumm.af/ */
+    box-shadow:
+        2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+        6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+        12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+        22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+        41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+        100px 100px 80px rgba(0, 0, 0, 0.07)
+    ;
+}
+
+.subcategory-title {
+    width: 100%;
+    color: var(--main-color);
+}
