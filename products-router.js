@@ -55,7 +55,7 @@ function readProduct(req, res, next){
 		res.status(404).send("That ID does not exist.");
 		return;
 	}
-	console.log("id: " + id);
+	console.log("read: " + id);
 	mongoose.connection.db.collection("products").findOne({"_id": oid}, function(err, result){
 		if(err){
 			res.status(500).send("Error reading database.");
@@ -72,7 +72,7 @@ function readProduct(req, res, next){
 function updateProduct(req, res, next){
 	let id = req.params.pid;	
 	let oid;
-	console.log("id: " + id);
+	console.log("update: " + id);
 	try{
 		oid = new ObjectID(id);
 	}catch{
@@ -103,7 +103,7 @@ function deleteProduct(req, res, next){
 	
 	let id = req.params.pid;
 	let oid;
-	console.log("id: " + id);
+	console.log("delete: " + id);
 	try{
 		oid = new ObjectID(id);
 	}catch{
@@ -138,7 +138,7 @@ function deleteProduct(req, res, next){
 function undoDelete(req, res, next){		
 	let id = req.params.pid;
 	let oid;
-	console.log("id: " + id);
+	console.log("undo: " + id);
 	try{
 		oid = new ObjectID(id);
 	}catch{

@@ -12,12 +12,11 @@ html
 					button(type="button" class="btn btn-dark" style={'padding-right': '10px'}) Search
 				br
 			ul(class="list-group")
-				if products.length > 0
+				if user.cart.length > 0
 					each product in products
-						if product.hidden==false
-							li(class="list-group-item list-group-item-action")
-								a(href="/products/" + product["_id"])= product.name
-								br
+						li(class="list-group-item list-group-item-action")
+							a(href="/products/" + product["_id"])= product.name
+							br
 				else
 					p There are currently no products stored in the database.
 			a(href="/")

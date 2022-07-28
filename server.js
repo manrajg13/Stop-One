@@ -11,10 +11,10 @@ app.set("view engine", "pug");
 
 //Serve static files from public (for the add page)
 app.use(express.static("public"));
-let productsRouter = require("./products-router");
-app.use("/products", productsRouter);
 let usersRouter = require("./users-router");
 app.use("/users", usersRouter);
+let productsRouter = require("./products-router");
+app.use("/products", productsRouter);
 
 app.get('/', function(req, res) {
 	
@@ -27,6 +27,37 @@ app.get('/', function(req, res) {
 		console.log(result);
 		res.render('pages/index', result);
 	});
+});
+
+app.post("/login", function(req, res, next){
+	if(req.session.loggedin){
+		res.redirect("/");
+		return;
+	}
+	
+	let username = req.body.username;
+	let password = req.body.password;
+	mongoose.connection.db.collection("users").findOne({username: username, password: password}, function(err, result){
+		if(err)throw err;
+		
+		console.log(result);
+		
+		if(result){
+			req.session.loggedin = true;
+			req.session.username = username;
+			console.log("Username: " + username);
+			console.log(result);
+			res.redirect("/");
+		}else{
+			res.status(401).send("Not authorized. Invalid username or password.");
+			return;
+		}
+	});
+});
+
+app.get("/logout", function(req, res, next){
+	req.session.loggedin = false;
+	res.redirect("/");
 });
 
 mongoose.connect(uri, {useNewUrlParser: true});

@@ -8,7 +8,7 @@
 		<title>Login</title>
 		<link rel="shortcut icon" href="icon.gif">
 	<body>
-		<form>
+		<form action="/login" method="POST">
 			<div>
 				<a href="../index.html"><img class="logo" src="../assets/logo.png"></a>
 				<div class="login">
@@ -18,14 +18,12 @@
 					<label>Password : </label>
 					<input type="password" placeholder="Enter Password" name="password" required><br><br>
 					<button class="login-button" type="submit">Login</button><br>
-					<input type="checkbox" checked="checked">Remember me&emsp;&emsp;&emsp;&emsp;
-					Forgot <a href="#"> password? </a>
 				</div>
 				<br>
 				<div class="register">
 					<p><hr>New to Stop One?<hr><br></p>
 				</div>
-				<a href="../sign_up/signup.html"><button class="register-button" type="button" formnovalidate="formnovalidate">Create your Stop One account</button></a>
+				<a href="../signup/signup.html"><button class="register-button" type="button" formnovalidate="formnovalidate">Create your Stop One account</button></a>
 			</div>
     	</form>
 	</body>

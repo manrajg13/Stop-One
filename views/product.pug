@@ -1,40 +1,68 @@
-html
+doctype html
+html(lang='en')
 	head
-		title #{product.name}
-		link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css')
+		title Account
+		link(rel='stylesheet' href='product.css')
+		link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+
 	body
-		script(src="../product.js")
-		form(action="/products/" + product["_id"], method="POST")
-			div(class="position-absolute top-0 start-50" style="margin-top: 200px")
-				<h3 class="h3 mb-3 fw-normal">#{product.name}</h1>
-				|ID:
-				input#id(type="textbox" name="id" disabled value=product["_id"])
-				br
-				|Deleted:
-				input(type="textbox" name="hidden" disabled value=product.hidden)
-				br
-				|Name:
-				input(type="textbox" name="name" required value=product.name)
-				br
-				|Price:
-				input(type="textbox" name="price" required value=product.price)
-				br
-				|Stock:
-				input(type="textbox" name="stock" required value=product.stock)
-				br
-				|Deletion Comments:
-				if product.hidden==true
-					input(type="textbox" name="comments" value=product.comments)
-				else
-					input(type="textbox" name="comments" disabled value=product.comments)
-				br
-				div(class="row g-2" style={padding: '10px'})
-					button(type="submit" class="btn btn-primary" style={width: '45%', 'margin-right': '5px'} ) Save Changes
-					button(type="button" class="btn btn-danger" style={width: '50%'} onclick="deleteProduct()") Delete Product
-				br
-				div(class="row g-3")
-					br
-					button(type="button" class="btn btn-outline-danger" style={width: '50%'} onclick="undoDelete()") Undo Deletion
-					br
-					a(href="/products/"  style={width: '50%'})
-						button(type="button" class="btn btn-outline-secondary") View All Products
+		nav
+			a(href='../index.html')
+				img.logo(src='../assets/logo.png')
+
+			div.search-container
+				form
+					input.search(
+						type='text'
+						placeholder='Search...'
+						name='search'
+					)
+					button(type='submit')
+						i(
+							class='fa fa-search'
+						)
+
+			a(href="#accounts")
+				button#account
+					i(class='fa fa-user')
+
+			a(href='../public/settings/settings.html')
+				button#settings
+					i(class='fa fa-gear')
+						
+			a(href='#cart')
+				button#cart
+					i(class='fa fa-shopping-cart')
+
+			a#sign_in(href='../public/login/login.html')
+				button SIGN IN
+
+			a#sign_up(href='../public/signup/signup.html')
+				button SIGN UP
+
+		div.contents
+			h1 Product Name
+
+			img.product-img(src='../public/assets/logo.png')
+
+			div.price
+				h2 $19.99
+					button.purchase(type='submit') Add to Cart
+					button.purchase(type='submit') Purchase
+
+			hr
+
+			p Description
+			
+			p Ratings
+			h5 &emsp;&emsp;Value
+			h5 &emsp;&emsp;Durability
+			h5 &emsp;&emsp;Coolness
+
+			br
+			p Reviews
+			br
+
+			button.purchase(type='submit') Report Product
+
+		script(src='../public/script.js')
