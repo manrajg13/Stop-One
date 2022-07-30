@@ -12,8 +12,6 @@
 		<link rel="shortcut icon" href="icon.gif">
 	</head>	
 	<body>
-	</head>
-    <body>
 		<table>
             <thead>
                 <tr>
@@ -40,4 +38,3 @@
         </table>
 	</body>
 </html>	
-</html>
