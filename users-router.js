@@ -3,15 +3,11 @@ const mongoose = require("mongoose");
 const ObjectID = require('mongoose').Types.ObjectId;
 let router = express.Router();
 
-//router.get("/", listUsers);
+router.get("/", signedIn);
 router.post("/", createNewUser);
 
 router.get("/:uid", readUser);
 router.delete("/:uid", deleteUser);
-
-/*function listUsers(req, res, next){
-	console.log("/users GET request received.");
-}*/
 
 function createNewUser(req, res, next){
 	let user = {};
@@ -19,6 +15,7 @@ function createNewUser(req, res, next){
 	user.username = req.body.username;
 	user.email = req.body.email;
 	user.password = req.body.password;
+	user.signedIn = true;
 	
 	mongoose.connection.db.collection("users").insertOne(user, function(err, result){
 		if(err){
@@ -80,8 +77,10 @@ function deleteUser(req, res, next){
 	});
 }	
 
-
-
+function signedIn(req, res, next){
+	console.log("bitch:" + __dirname);
+	res.sendFile(path.join(__dirname, '/public/index2.html'));
+}	
 
 //Export the router so it can be mounted in the main app
 module.exports = router;
