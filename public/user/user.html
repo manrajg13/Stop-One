@@ -1,0 +1,64 @@
+doctype html
+html(lang='en')
+	head
+		title Account
+		link(rel='stylesheet' href='user.css')
+		link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+
+	body
+		nav
+			a(href='../index.html')
+				img.logo(src='../assets/logo.png')
+
+			div.search-container
+				form
+					input.search(
+						type='text'
+						placeholder='Search...'
+						name='search'
+					)
+					button(type='submit')
+						i(
+							class='fa fa-search'
+						)
+
+			a(href="../user/user.html")
+				button#account
+					i(class='fa fa-user')
+
+			a(href='../settings/settings.html')
+				button#settings
+					i(class='fa fa-gear')
+						
+			a(href='../cart/cart.html')
+				button#cart
+					i(class='fa fa-shopping-cart')
+
+			a#sign_in(href='../login/login.html')
+				button SIGN IN
+
+			a#sign_up(href='../sign_up/signup.html')
+				button SIGN UP
+
+		div.contents
+			h1 User Name
+
+			img.product-img(src='../assets/logo.png')
+			br
+			br
+			hr
+
+			p Products
+			
+			p Ratings
+			h5 &emsp;&emsp;Reliability
+			h5 &emsp;&emsp;Products
+			h5 &emsp;&emsp;Delivery
+
+			br
+			p Reviews
+			br
+
+			button.purchase(type='submit') Report User
+
+		script(src='../script.js')
