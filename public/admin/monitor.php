@@ -10,7 +10,8 @@
 		<link rel="stylesheet" href="monitor.css"/>
 		<title>Monitor</title>
 		<link rel="shortcut icon" href="icon.gif">
-	<body>
+	</head>
+    <body>
 		<table>
             <thead>
                 <tr>
@@ -36,4 +37,4 @@
             </tbody>
         </table>
 	</body>
-</head>
+</html>
