@@ -22,7 +22,7 @@ nav button {
 	margin-left: 10px;
 	height: 100%;
 	width: 40px;
-	background-color: var(--main-color);
+	background-color: #b4154f;
 	border: none;
 	border-radius: 5px;
 	color: white;
@@ -33,7 +33,7 @@ form button {
 	float: right;
 	height: 100%;
 	width: 60px;
-	background-color: var(--main-color);
+	background-color: --main-color;
 	border: none;
 	border-radius: 5px;
 	border-top-left-radius: 0px;
@@ -61,10 +61,25 @@ i {
 	color: white;
 }
 
-a p {
-	margin-bottom: 3%;
+hr {
+	background-color: #adadad;
+    border: 0 none;
+    color: #eee;
+    height: 1px;
+    position: relative;
+    bottom: 10px;
+}
+
+.report {
+	background-color: #b4154f;
 	color: white;
-	text-align: center;
+	padding: 5px;
+	margin-right: 3px;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	width: 20%;
+	float: right;
 }
 
 .logo {
@@ -92,16 +107,6 @@ a p {
 	box-sizing: border-box;
 }
 
-.account {
-	margin-left: 30px;
-	font-size: 16px;
-	scale: 1.35;
-	color: white;
-	background-color: var(--main-color);
-	width: 30px;
-	height: 100%;
-}
-
 .contents {
 	overflow: hidden;
 	margin: auto;
@@ -109,52 +114,15 @@ a p {
 	max-width: 750px;
 }
 
-.deals {
-	background-color: #f0ede6;
-	height: 200px;
-	margin: 5px;
-	width: calc(100% - 10px);
-}
-
-.items {
-	margin-top: 10px;
-	margin-bottom: -20px;
-	height: 300px;
-	width: 100%;
-	display: flex;
-	text-align: center;
-}
-.item {
-	width: 33%;
-	margin-left: 5px;
-	margin-right: 5px;
-	height: 250px;
-	background-color: #f0ede6;
-	padding: 15px;
-}
-
-.top {
-	margin-top: 20px;
-	height: 30px;
-	width: 100%;
-	background-color: var(--main-color);
-	border: none;
-	color: white;
-}
-
-.misc {
-	width: 100%;
-	height: 200px;
-	background-color: var(--main-color);
+.user-img {
+	width: 100%
 }
 
 #sign_in {
 	color: white;
 }
 
-.link {
-	width: calc(100% - 10px);
-	margin: auto;
-	background-color: var(--main-color);
-	border-radius: 10px;
+#categories {
+	color: white;
+	text-align: center;
 }

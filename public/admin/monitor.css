@@ -1,3 +1,17 @@
-table {
-    border: 0;
+.label {
+    width: 50%;
+    text-align:center;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width:100%;
+}
+
+.circle {
+    border-radius:50px;
+    width:50px;
+    height:50px;
 }
