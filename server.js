@@ -19,13 +19,14 @@ app.use("/users", usersRouter);
 let productsRouter = require("./products-router");
 app.use("/products", productsRouter);
 
+/*
 function monitor(status){
 	data = JSON.stringify(status, null, 2);
 	fs.writeFile('monitor.json', data, (err)=>{
 		if(err) throw err;
 		console.log("Status written to file.");
 	});
-}
+}*/
 
 app.post("/login", function(req, res, next){
 	let username = req.body.username;
@@ -36,7 +37,7 @@ app.post("/login", function(req, res, next){
 
 		if(result){
 			console.log("Username: " + username);
-			res.redirect("/users");
+			res.redirect("/");
 		}
 		else{
 			res.status(401).send("Not authorized. Invalid username or password.");
@@ -54,8 +55,8 @@ mongoose.connect(uri, {useNewUrlParser: true});
 db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
-	status = {stat: 1};
-	monitor(status);
+	//status = {stat: 1};
+	//monitor(status);
 	app.listen(3000);
 	console.log("Server listening on port 3000");
 });
