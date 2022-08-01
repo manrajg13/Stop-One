@@ -152,7 +152,7 @@ a p {
 	color: white;
 }
 
-#link {
+.link {
 	width: calc(100% - 10px);
 	margin: auto;
 	background-color: var(--main-color);
