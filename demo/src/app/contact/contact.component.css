@@ -1,0 +1,27 @@
+p {
+    font-weight: normal;
+}
+
+select {
+    width: 100%;
+}
+
+.inpt {
+    width: 98%;
+}
+
+.submit {
+    background-color: #b4154f;
+    color: white;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.map {
+    text-align: center;
+    width: 100%;
+}

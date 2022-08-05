@@ -3,16 +3,34 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DemoComponentComponent } from './demo-component/demo-component.component';
-import { HomepageComponent } from './homepage/homepage.component';
-import { HeaderComponent } from './header/header.component';
+import { SignupComponent } from './signup/signup.component';
+import { HomeComponent } from './home/home.component';
+import { SigninComponent } from './signin/signin.component';
+import { AboutComponent } from './about/about.component';
+import { SettingsComponent } from './settings/settings.component';
+import { AdminComponent } from './admin/admin.component';
+import { CategoriesComponent } from './categories/categories.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { PaymentComponent } from './payment/payment.component';
+import { ProductComponent } from './product/product.component';
+import { ContactComponent } from './contact/contact.component';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DemoComponentComponent,
-    HomepageComponent,
-    HeaderComponent
+    SignupComponent,
+    HomeComponent,
+    SigninComponent,
+    AboutComponent,
+    SettingsComponent,
+    AdminComponent,
+    CategoriesComponent,
+    CheckoutComponent,
+    PaymentComponent,
+    ProductComponent,
+    ContactComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,

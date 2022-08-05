@@ -1,2 +1,20 @@
-<app-header></app-header>
-<app-homepage></app-homepage>
+<!--Navbar-->
+<div class="navbar">
+  <nav>
+    <a routerLink="home"><img class="logo" src="../assets/logo.png"></a>
+    <div class="search-container">
+      <form>
+        <input type="text" class="search" placeholder="Search..." name="search">
+        <button type="submit"><i class="fa fa-search" style="scale: 1.5; color: white;"></i></button>
+      </form>
+    </div>
+
+    <a href="user"><button id="account"><i class="fa fa-user"></i></button></a>
+    <a routerLink="settings"><button id="settings"><i class="fa fa-gear"></i></button></a>
+    <a routerLink="checkout"><button id="cart"><i class="fa fa-shopping-cart"></i></button></a>
+
+    <a id="sign_in" routerLink="signin"><button>SIGN IN</button></a>
+    <a id="sign_up" routerLink="signup"><button>SIGN UP</button></a>
+  </nav>
+  <router-outlet></router-outlet>
+</div>
