@@ -1,0 +1,39 @@
+img {
+    height: inherit;
+}
+
+p {
+    color: white;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+a:hover{
+    filter: brightness(60%);
+}
+
+.container {
+    height: 20vh;
+    width: 20vh;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+.grid {
+    display: flex;                       /* establish flex container */
+    flex-wrap: wrap;                     /* enable flex items to wrap */
+    justify-content: space-around;
+}
+
+.cell {
+    display: block;
+    text-align: center;
+    margin: 0px;
+    background-color: #b4154f;
+}
