@@ -37,7 +37,7 @@ app.post("/login", function(req, res, next){
 
 		if(result){
 			console.log("Username: " + username);
-			res.redirect("/");
+			res.redirect("/loggedin");
 		}
 		else{
 			res.status(401).send("Not authorized. Invalid username or password.");

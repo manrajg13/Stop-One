@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +17,7 @@ import { PaymentComponent } from './payment/payment.component';
 import { ProductComponent } from './product/product.component';
 import { ContactComponent } from './contact/contact.component';
 import { UserComponent } from './user/user.component';
+import { LoggedinComponent } from './loggedin/loggedin.component';
 
 @NgModule({
   declarations: [
@@ -30,11 +33,14 @@ import { UserComponent } from './user/user.component';
     PaymentComponent,
     ProductComponent,
     ContactComponent,
-    UserComponent
+    UserComponent,
+    LoggedinComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
