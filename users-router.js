@@ -1,30 +1,32 @@
 const express = require('express');
 const mongoose = require("mongoose");
 const ObjectID = require('mongoose').Types.ObjectId;
+const bodyParser = require('body-parser')
+const cors = require("cors")
+let corsOptions = {
+	origin: "http://localhost:4200"
+};
 let router = express.Router();
+router.use(cors(corsOptions));
+router.use(bodyParser.json());
 
 router.post("/", createNewUser);
 
 router.get("/:uid", readUser);
-//router.delete("/:uid", deleteUser);
 
 function createNewUser(req, res, next){
-	let user = {};
 	
-	user.username = req.body.username;
-	user.email = req.body.email;
-	user.password = req.body.password;
-	user.signedIn = true;
-	
+	let user = {username: req.body.username, password: req.body.password, email: req.body.email};
+
 	mongoose.connection.db.collection("users").insertOne(user, function(err, result){
 		if(err){
 			res.status(500).send("Error saving to database.");
 			return;
 		}
-		let newID = result.insertedId;
-		
-		//Redirect to the view page for the new product
-		res.redirect("http://localhost:3000/users/" + newID);
+		if(result){
+			console.log("Username: " + user.username);
+			res.status(200);
+		}
 	});
 }
 

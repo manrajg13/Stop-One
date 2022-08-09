@@ -19,6 +19,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'signin', component: SigninComponent},
   { path: 'signup', component: SignupComponent},
+  { path: 'users', component: SignupComponent},
   { path: 'about', component: AboutComponent},
   { path: 'settings', component: SettingsComponent},
   { path: 'admin', component: AdminComponent},
@@ -26,7 +27,7 @@ const routes: Routes = [
   { path: 'checkout', component: CheckoutComponent},
   { path: 'payment', component: PaymentComponent},
   { path: 'contact', component: ContactComponent},
-  { path: 'users', component: UserComponent},
+  { path: 'user', component: UserComponent},
   { path: 'products', component: ProductComponent}
 ];
 
