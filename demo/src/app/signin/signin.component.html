@@ -1,16 +1,16 @@
 <div>
     <form>
         <div>
-            <div class="login">
+            <div class="submit-form">
                 <h2>Sign in</h2>
                 <label>Username : </label>
-                <input type="text" placeholder="Enter Username" name="username" required><br>
+                <input type="text" placeholder="Enter Username" name="username" required [(ngModel)]="signin.username"><br>
                 <label>Password : </label>
-                <input type="password" placeholder="Enter Password" name="password" required><br><br>
-                <button class="login-button" type="submit">Login</button><br>
+                <input type="password" placeholder="Enter Password" name="password" required [(ngModel)]="signin.password"><br><br>
+                <button (click)="signedIn()" class="login-button" type="submit">Login</button><br>
                 <input type="checkbox" checked="checked">Remember me&emsp;&emsp;&emsp;&emsp;
                 Forgot <a href="#"> password? </a>
-            </div>
+            </div>  
             <br>
             <div class="register">
                 <hr><p>New to Stop One?</p><hr><br>

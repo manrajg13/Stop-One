@@ -3,11 +3,9 @@ const mongoose = require("mongoose");
 const ObjectID = require('mongoose').Types.ObjectId;
 let router = express.Router();
 
-router.get("/", signedIn);
 router.post("/", createNewUser);
 
 router.get("/:uid", readUser);
-router.put("/:uid", updateUser);
 //router.delete("/:uid", deleteUser);
 
 function createNewUser(req, res, next){
@@ -54,31 +52,8 @@ function readUser(req, res, next){
 	});
 }
 
-function updateUser(req, res, next){
-	let id = req.params.uid;	
-	let oid;
-
-	try{
-		oid = new ObjectID(id);
-	}catch{
-		res.status(404).send("That ID does not exist.");
-		return;
-	}
-	console.log("id: " + id);
-	mongoose.connection.db.collection("users").findOne({"_id": oid}, function(err, result){
-		if(err){
-			res.status(500).send("Error reading database.");
-			return;
-		}
-		if(!result){
-			res.status(404).send("That ID does not exist in the database.");
-			return;
-		}
-		res.status(200).render("user", {user: result});
-	});
-}
-
-/*function deleteUser(req, res, next){
+/*
+function deleteUser(req, res, next){
 	let id = req.params.uid;
 	let oid;
 	console.log("deleting: " + id);
@@ -100,7 +75,7 @@ function updateUser(req, res, next){
 		}
 		res.status(200).render("user", {user: result});
 	});
-}*/		
+}*/	
 
 //Export the router so it can be mounted in the main app
 module.exports = router;
