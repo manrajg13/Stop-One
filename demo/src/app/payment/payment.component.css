@@ -24,10 +24,6 @@ form {
     flex: 4;
 }
 
-.Yorder {
-    flex: 2;
-}
-
 .title {
     background-color: var(--main-color);
     border-radius: 5px 5px 0 0;
@@ -35,10 +31,11 @@ form {
     color: #f6f6f6;
 }
 
-h2 {
+h1 {
     margin: 0;
+    font-weight: normal;
     padding-left: 15px;
-    color:#b4154f;
+    color: black;
 }
 
 .required {
@@ -79,29 +76,9 @@ select {
 
 .Yorder {
     margin-top: 15px;
-    height: 600px;
+    height: 335px;
     padding: 20px;
     border: 1px solid #dadada;
-}
-
-table {
-    margin: 0;
-    padding: 0;
-}
-
-th {
-    border-bottom: 1px solid #dadada;
-    padding: 10px 0;
-}
-
-tr>td:nth-child(1) {
-    text-align: left;
-    color: #2d2d2a;
-}
-
-tr>td:nth-child(2) {
-    text-align: right;
-    color: #b4154f
 }
 
 td {
@@ -109,23 +86,12 @@ td {
     padding: 25px 25px 25px 0;
 }
 
-p {
-    display: block;
-    color: #888;
-    margin: 0;
-    padding-left: 25px;
-}
-
-.Yorder>div {
-    padding: 15px 0;
-}
-
 button {
     width: 100%;
     margin-top: 10px;
     padding: 10px;
     border: none;
-    border-radius: 30px;
+    border-radius: 4px;
     background: #b4154f;
     color: #fff;
     font-size: 15px;
