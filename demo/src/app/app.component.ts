@@ -9,15 +9,12 @@ import { SigninService } from './services/signin.service';
 })
 export class AppComponent implements OnInit {
   title = 'Stop-One';
-  localLogin: any;
 
   constructor (public signinService: SigninService) {
-    this.localLogin = localStorage.getItem('loggedIn');
-    console.log(this.localLogin);
+
   }
 
   ngOnInit(): void {
-    this.localLogin = localStorage.getItem('loggedIn');
-    console.log(this.localLogin);
+
   }
 }

@@ -8,9 +8,8 @@ const baseUrl = 'http://localhost:3000/signin';
   providedIn: 'root'
 })
 export class SigninService {
-  loggedIn = false;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { localStorage.setItem('loggedIn', 'false') }
 
   create(data: any): Observable<any> {
     return this.http.post(baseUrl, data);
