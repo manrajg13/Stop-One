@@ -10,11 +10,7 @@ import { SigninService } from './services/signin.service';
 export class AppComponent implements OnInit {
   title = 'Stop-One';
 
-  constructor (public signinService: SigninService) {
+  constructor (public signinService: SigninService) { }
 
-  }
-
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void { }
 }
