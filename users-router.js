@@ -32,11 +32,8 @@ function createNewUser(req, res, next){
 
 function readUser(req, res, next){
 	let id = req.params._id;
-	let oid = new ObjectID(id);;
 
-	console.log("read: " + id);
-	mongoose.connection.db.collection("users").findOne({"_id": oid}, function(err, result){
-		console.log("Result: " + result.username);
+	mongoose.connection.db.collection("users").findOne({"_id": id}, function(err, result){
 		if(err){
 			res.status(500).send("Error reading database.");
 			return;
