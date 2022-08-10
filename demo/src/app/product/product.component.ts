@@ -17,7 +17,6 @@ export class ProductComponent implements OnInit {
   constructor(public productService: ProductService, public signinService: SigninService, private route: ActivatedRoute) { }
 
   product: Products = {
-    _id: null,
     name: '',
     description: '',
     price: 0

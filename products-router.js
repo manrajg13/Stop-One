@@ -4,14 +4,14 @@ const ObjectID = require('mongoose').Types.ObjectId;
 const bodyParser = require('body-parser')
 const cors = require("cors")
 let corsOptions = {
-	origin: "http://localhost:4200"
+	origin: "http://localhost:4200/products"
 };
 let router = express.Router();
 
 router.get("/", listProducts);
 router.post("/", createNewProduct);
 
-router.get("/:id", readProduct);
+router.get("/:_id", readProduct);
 
 function listProducts(req, res, next){
 	
@@ -44,17 +44,12 @@ function createNewProduct(req, res, next){
 }
 
 function readProduct(req, res, next){
-	let id = req.params.id_;	
-	let oid;
+	let id = req.params._id;
+	let oid = new ObjectID(id);;
 
-	try{
-		oid = new ObjectID(id);
-	}catch{
-		res.status(404).send("That ID does not exist.");
-		return;
-	}
 	console.log("read: " + id);
 	mongoose.connection.db.collection("products").findOne({"_id": oid}, function(err, result){
+		console.log("Result: " + result.name);
 		if(err){
 			res.status(500).send("Error reading database.");
 			return;
@@ -63,7 +58,7 @@ function readProduct(req, res, next){
 			res.status(404).send("That ID does not exist in the database.");
 			return;
 		}
-		res.status(200);
+		res.send(result);
 	});
 }
 
