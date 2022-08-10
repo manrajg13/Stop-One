@@ -5,60 +5,41 @@
 <br>
 
 <div class="contents">
+    <h1>Products List</h1>
+
     <div class="grid">
-        <div class="container">
+        <div class="container" *ngFor="let product of products; let i = index" (click)="getProduct(product)">
             <a href="">
-                <p class="cell">Art</p>
-                <img id="test" src="../assets/background_images/art.jpg">
+                <div class="cell"><span style="float: left;">${{ product.price }}</span><span>{{ product.name }}</span>
+                </div>
+                <img id="test" src="../assets/background_images/athletics.jpg">
             </a>
         </div>
-        <div class="container">
-            <a href="">
-                <p class="cell">Athletics</p>
-                <img src="../assets/background_images/athletics.jpg">
-            </a>
-        </div>
-        <div class="container">
-            <a href="">
-                <p class="cell">Beauty</p>
-                <img src="../assets/background_images/beauty.jpg">
-            </a>
-        </div>
-        <div class="container">
-            <a href="">
-                <p class="cell">Electronics</p>
-                <img src="../assets/background_images/electronics.jpg">
-            </a>
-        </div>
-        <div class="container">
-            <a href="">
-                <p class="cell">Entertainment</p>
-                <img src="../assets/background_images/entertainment.jpg">
-            </a>
-        </div>
-        <div class="container">
-            <a href="">
-                <p class="cell">Fashion</p>
-                <img src="../assets/background_images/fashion.jpg">
-            </a>
-        </div>
-        <div class="container">
-            <a href="">
-                <p class="cell">Homemade</p>
-                <img src="../assets/background_images/homemade.jpg">
-            </a>
-        </div>
-        <div class="container">
-            <a href="">
-                <p class="cell">Outdoors</p>
-                <img src="../assets/background_images/outdoors.jpg">
-            </a>
-        </div>
-        <div class="container">
-            <a href="">
-                <p class="cell">Toys</p>
-                <img src="../assets/background_images/toys.jpg">
-            </a>
+    </div>
+
+    <div id="addButton" *ngIf="!signinService.loggedIn">
+        <div class="submit-form">
+            <div *ngIf="!submitted">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" required [(ngModel)]="product.name" name="name" />
+                </div>
+
+                <div class="form-group">
+                    <label for="price">Price</label>
+                    <input type="text" class="form-control" id="price" required [(ngModel)]="product.price"
+                        name="price" />
+                </div>
+
+
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <input class="form-control" id="description" required [(ngModel)]="product.description"
+                        name="description" />
+                </div>
+                <br>
+                <button class="addButton" (click)="addProduct()">Add Product</button>
+            </div>
         </div>
     </div>
 </div>

@@ -9,6 +9,7 @@
             Description: {{ product.description }}
         </li>
     </ul>
+
     <a id="addButton" *ngIf="!signinService.loggedIn">
         <div class="submit-form">
             <div *ngIf="!submitted">
@@ -52,5 +53,6 @@
             </div>  
         </div>
     </a>    
+
     <a id="addProduct" *ngIf="" (click)="addProduct()"><button>Add Product</button></a>
 </div>

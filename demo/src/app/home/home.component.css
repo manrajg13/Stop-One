@@ -80,6 +80,53 @@ a:hover {
 	background-color: #b4154f;
 }
 
+.user-img {
+	width: 100%
+}
+
+.price {
+	display: block;
+}
+
+.purchase {
+	background-color: #b4154f;
+	color: white;
+	padding: 5px;
+	margin-right: 3px;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	width: 20%;
+	float: right;
+}
+
+.addButton{
+	background-color: #b4154f;
+	color: white;
+	line-height: 0px;
+	height: 30px;
+	width: 40%;
+}
+
+.submit-form {
+	display: flex;
+	justify-content: center;
+}
+
+input {
+	width: 100%;
+	padding: 12px 20px;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+.addButton {
+	border: 1px solid #adadad;
+	border-radius: 4px;
+	padding: 15px;
+}
+
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 	.container {
 		display: block;
