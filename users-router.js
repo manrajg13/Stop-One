@@ -54,30 +54,5 @@ function readUser(req, res, next){
 	});
 }
 
-/*
-function deleteUser(req, res, next){
-	let id = req.params.uid;
-	let oid;
-	console.log("deleting: " + id);
-	try{
-		oid = new ObjectID(id);
-	}catch{
-		res.status(404).send("That ID does not exist.");
-		return;
-	}
-	
-	mongoose.connection.db.collection("users").deleteOne({"_id": oid}, function(err, result){
-		if(err){
-			res.status(500).send("Error reading database.");
-			return;
-		}
-		if(!result){
-			res.status(404).send("That ID does not exist in the database.");
-			return;
-		}
-		res.status(200).render("user", {user: result});
-	});
-}*/	
-
 //Export the router so it can be mounted in the main app
 module.exports = router;

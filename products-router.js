@@ -1,16 +1,17 @@
 const express = require('express');
 const mongoose = require("mongoose");
 const ObjectID = require('mongoose').Types.ObjectId;
-
+const bodyParser = require('body-parser')
+const cors = require("cors")
+let corsOptions = {
+	origin: "http://localhost:4200"
+};
 let router = express.Router();
 
 router.get("/", listProducts);
 router.post("/", createNewProduct);
 
 router.get("/:pid", readProduct);
-router.post("/:pid", updateProduct);
-router.delete("/:pid", deleteProduct);
-router.put("/:pid", undoDelete);
 
 function listProducts(req, res, next){
 	
@@ -20,7 +21,7 @@ function listProducts(req, res, next){
 			return;
 		}
 		console.log(result);
-		res.status(200).render("productlist", {products: result});
+		res.status(200);
 	});
 }
 
@@ -66,108 +67,6 @@ function readProduct(req, res, next){
 			return;
 		}
 		res.status(200).render("product", {product: result});
-	});
-}
-
-function updateProduct(req, res, next){
-	let id = req.params.pid;	
-	let oid;
-	console.log("update: " + id);
-	try{
-		oid = new ObjectID(id);
-	}catch{
-		res.status(404).send("That ID does not exist.");
-		return;
-	}
-	
-	let product = {}
-	
-	product.name = req.body.name;
-	product.price = Number(req.body.price);
-	product.stock = Number(req.body.stock);
-	product.comments = req.body.comments;
-	product.hidden = req.body.hidden;
-		
-	mongoose.connection.db.collection("products").replaceOne({"_id": oid}, product, function(err, result){
-		if(err){
-			res.status(500).send("Error saving to database.");
-			return;
-		}
-		console.log(result);
-		//Redirect to the view page for the new product
-		res.redirect("http://localhost:3000/products/" + id);
-	});
-}
-
-function deleteProduct(req, res, next){ 
-	
-	let id = req.params.pid;
-	let oid;
-	console.log("delete: " + id);
-	try{
-		oid = new ObjectID(id);
-	}catch{
-		res.status(404).send("That ID does not exist.");
-		return;
-	}
-	
-	mongoose.connection.db.collection("products").findOne({"_id": oid}, function(err, result){
-		if(err){
-			res.status(500).send("Error reading database.");
-			return;
-		}
-		if(!result){
-			res.status(404).send("That ID does not exist in the database.");
-			return;
-		}
-		result.hidden = true;
-		result.comments = req.body.comments;
-				
-		mongoose.connection.db.collection("products").replaceOne({"_id": oid}, result, function(err, result){
-			if(err){
-				res.status(500).send("Error saving to database.");
-				return;
-			}
-		});
-		
-		console.log(result);
-		res.status(200).send();
-	});
-}
-
-function undoDelete(req, res, next){		
-	let id = req.params.pid;
-	let oid;
-	console.log("undo: " + id);
-	try{
-		oid = new ObjectID(id);
-	}catch{
-		res.status(404).send("That ID does not exist.");
-		return;
-	}
-	
-	mongoose.connection.db.collection("products").findOne({"_id": oid}, function(err, result){
-		if(err){
-			res.status(500).send("Error reading database.");
-			return;
-		}
-		if(!result){
-			res.status(404).send("That ID does not exist in the database.");
-			return;
-		}
-		
-		result.hidden = false;
-		result.comments = "";
-		
-		mongoose.connection.db.collection("products").replaceOne({"_id": oid}, result, function(err, result){
-			if(err){
-				res.status(500).send("Error saving to database.");
-				return;
-			}
-		});
-		
-		console.log(result);
-		res.status(200).send();
 	});
 }
 

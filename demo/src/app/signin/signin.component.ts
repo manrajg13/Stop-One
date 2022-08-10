@@ -28,7 +28,7 @@ export class SigninComponent implements OnInit {
     );
     alert("User has been logged in successfully!");
     this.appComponent.signedIn = true;
-    window.location.href = "http://localhost:4200/home";
+    window.location.href = "home";
   }
 
 }

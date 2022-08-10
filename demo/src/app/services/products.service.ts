@@ -8,18 +8,15 @@ const baseUrl = 'http://localhost:3000/products/';
 @Injectable({
   providedIn: 'root'
 })
-export class HTTPService {
+export class ProductService {
   constructor(private http: HttpClient) { }
+  getAll(): Observable<any> {
+    return this.http.get<any>(baseUrl);
+  }
   get(id: any): Observable<Products> {
     return this.http.get(`${baseUrl}/${id}`);
   }
   create(data: any): Observable<any> {
     return this.http.post(baseUrl, data);
-  }
-  update(id: any, data: any): Observable<any> {
-    return this.http.put(`${baseUrl}/${id}`, data);
-  }
-  findByname(name: string): Observable<Products[]> {
-    return this.http.get<Products[]>(`${baseUrl}?title=${name}`);
   }
 }

@@ -18,6 +18,7 @@ import { ProductComponent } from './product/product.component';
 import { ContactComponent } from './contact/contact.component';
 import { UserComponent } from './user/user.component';
 import { LoggedinComponent } from './loggedin/loggedin.component';
+import { GlobalsComponent } from './globals/globals.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { LoggedinComponent } from './loggedin/loggedin.component';
     ProductComponent,
     ContactComponent,
     UserComponent,
-    LoggedinComponent
+    LoggedinComponent,
+    GlobalsComponent
   ],
   imports: [
     BrowserModule,

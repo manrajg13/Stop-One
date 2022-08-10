@@ -18,6 +18,7 @@ export class AppComponent implements OnInit{
   }
 
   ngOnInit() {
+    console.log(this.signedIn);
     if (this.signedIn) {
       document.getElementById('sign_in')!.innerHTML = "<button>SIGN OUT</button>";
       document.getElementById('sign_up')!.innerHTML = "";
@@ -25,7 +26,7 @@ export class AppComponent implements OnInit{
     }
     else {
       document.getElementById('sign_in')!.innerHTML = "<button>SIGN IN</button>";
-      document.getElementById('sign_up')!.innerHTML = "<button>SIGN OUT</button>";
+      document.getElementById('sign_up')!.innerHTML = "<button>SIGN UP</button>";
       document.getElementById('user')!.remove();
     }
   }

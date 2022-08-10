@@ -30,7 +30,7 @@ export class SignupComponent implements OnInit {
     );
     alert("User has been registered successfully!");
     this.appComponent.signedIn = true;
-    window.location.href = "http://localhost:4200/home";
+    window.location.href = "home";
   }
 
 }
