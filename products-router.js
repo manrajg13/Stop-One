@@ -11,7 +11,7 @@ let router = express.Router();
 router.get("/", listProducts);
 router.post("/", createNewProduct);
 
-router.get("/:pid", readProduct);
+router.get("/:id", readProduct);
 
 function listProducts(req, res, next){
 	
@@ -44,7 +44,7 @@ function createNewProduct(req, res, next){
 }
 
 function readProduct(req, res, next){
-	let id = req.params.pid;	
+	let id = req.params.id_;	
 	let oid;
 
 	try{

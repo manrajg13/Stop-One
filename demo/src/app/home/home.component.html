@@ -9,10 +9,10 @@
 
     <div class="grid">
         <div class="container" *ngFor="let product of products; let i = index">
-            <a href='/products/${product.id_}'>
+            <a>
                 <div class="cell"><span style="float: left;">${{ product.price }}</span><span>{{ product.name }}</span>
                 </div>
-                <img id="test" src="../assets/background_images/athletics.jpg">
+                <img id="test" src="../assets/background_images/athletics.jpg" routerLink="/products/{{ product._id }}">
             </a>
         </div>
     </div>
