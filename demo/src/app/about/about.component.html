@@ -11,18 +11,4 @@
         ~ Stop One Team (Group 8)
     </p>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d94443.86456302472!2d-82.99464225390622!3d42.2919534981513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2ac1b54f886b%3A0xb66cd49527fcdc51!2sWindsor%2C%20ON!5e0!3m2!1sen!2sca!4v1658191726556!5m2!1sen!2sca" width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <script>
-        fetch("http://api.openweathermap.org/data/2.5/weather?q=Windsor&units=metric&appid=32b9e7fa1481937682d0c25a214b9f24", {
-            "method": "GET",
-            "headers": {
-            }
-            })
-        .then(response => {
-            return response.json();
-        }).then(function(response) {
-            var div = document.createElement("div")
-            div.innerHTML = "Weather in Windsor<br>" + response.main.temp + " - " + response.weather[0].description;
-            document.body.appendChild(div);
-        });
-    </script>
 </div>
