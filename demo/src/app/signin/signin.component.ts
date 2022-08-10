@@ -24,6 +24,9 @@ export class SigninComponent implements OnInit {
       password: this.signin.password
     };
     this.signinService.create(data).subscribe(
+      data =>{
+        localStorage.setItem('currUser', data.username);
+      },
       error => {
         console.log(error);
       }
