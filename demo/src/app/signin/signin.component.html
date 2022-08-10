@@ -1,5 +1,5 @@
 <div>
-    <form *ngIf="signinService.getlogin() == 'false'">
+    <form *ngIf="signinService.getlogin() == 'false' || signinService.getlogin() == ''">
         <div>
             <div class="login">
                 <h2>Sign in</h2>

@@ -7,6 +7,7 @@ import { SigninService } from './services/signin.service';
   styleUrls: ['./app.component.css', '../../node_modules/font-awesome/css/font-awesome.css'],
   encapsulation: ViewEncapsulation.None
 })
+
 export class AppComponent implements OnInit {
   title = 'Stop-One';
 
