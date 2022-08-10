@@ -1,9 +1,15 @@
 <div>
-    <div *ngIf="product._id">
-        <h1 type="text" id="product-name" name="name">Name</h1>
+    <div *ngIf="product._id" class="contents">
+        <h1>{{ product.name }}</h1>
+        <img class="product-img" src="../assets/background_images/athletics.jpg">
+        <hr />
+        <h1>${{ product.price }}</h1>
+        <p>{{ product.description }}</p>
+        <button class="purchase" type="submit">Purchase</button>
+        <button class="report" type="submit">Report Product</button>
     </div>
 
-    <div *ngIf="!product._id">
+    <div *ngIf="!product._id" class="contents">
         <br />
         <p>No product was found...</p>
     </div>
