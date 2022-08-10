@@ -28,7 +28,8 @@ export class SigninComponent implements OnInit {
         console.log(error);
       }
     );
-    alert("User has been logged in successfully!");
+    
+    localStorage.setItem("currUser", '' + this.signin.username);
     this.signinService.login();
   }
 
