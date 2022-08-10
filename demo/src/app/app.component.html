@@ -1,13 +1,13 @@
 <!--Navbar-->
 <div class="navbar">
   <nav>
-    <a routerLink="home"><img class="logo" src="../assets/logo.png"></a>
+    <a routerLink="home"><img alt="StopOneLogo" class="logo" src="../assets/logo.png"></a>
     <div class="search-container">
     </div>
 
     <a id="user" *ngIf="signinService.getlogin() == 'true'" routerLink="user"><button id="account"><i class="fa fa-user"></i></button></a>
     <a routerLink="settings"><button id="settings"><i class="fa fa-gear"></i></button></a>
-    <a routerLink="checkout"><button id="cart"><i class="fa fa-shopping-cart"></i></button></a>
+    <a routerLink="payment"><button id="cart"><i class="fa fa-shopping-cart"></i></button></a>
 
     <a id="sign_in" *ngIf="signinService.getlogin() != 'true'" routerLink="signin"><button>SIGN IN</button></a>
     <a id="sign_up" *ngIf="signinService.getlogin() != 'true'" routerLink="signup"><button>SIGN UP</button></a>

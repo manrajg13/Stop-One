@@ -9,7 +9,10 @@ const baseUrl = 'http://localhost:3000/products';
   providedIn: 'root'
 })
 export class ProductService {
-  constructor(private http: HttpClient) { }
+  subtotal: number;
+  constructor(private http: HttpClient) {
+    this.subtotal = 0;
+  }
   getAll(): Observable<any> {
     return this.http.get<any>(baseUrl);
   }

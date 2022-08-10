@@ -102,3 +102,7 @@ button:hover {
     cursor: pointer;
     filter: brightness(90%);
 }
+
+h3{
+	text-align: center;
+}

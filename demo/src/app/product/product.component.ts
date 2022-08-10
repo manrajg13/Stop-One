@@ -10,11 +10,16 @@ import { ObjectId } from 'mongodb';
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.css']
 })
+
 export class ProductComponent implements OnInit {
+
+  cost: number;
 
   products?: Products[];
 
-  constructor(public productService: ProductService, public signinService: SigninService, private route: ActivatedRoute) { }
+  constructor(public productService: ProductService, public signinService: SigninService, private route: ActivatedRoute) { 
+    this.cost = 0;
+  }
 
   product: Products = {
     name: '',
@@ -36,6 +41,11 @@ export class ProductComponent implements OnInit {
         error => {
           console.log(error);
         });
+  }
+
+  addSubtotal() {
+    this.cost += this.product.price!;
+    localStorage.setItem("purchased", "" + this.cost);
   }
 
 }

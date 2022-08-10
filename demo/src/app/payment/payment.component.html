@@ -1,4 +1,4 @@
-<div class="container">
+<div *ngIf="!this.bought" class="container">
     <div class="title">
         <h1>Process Payment</h1>
     </div>
@@ -36,14 +36,18 @@
                 </tr>
                 <tr>
                     <td>Subtotal</td>
-                    <td id="subtotal">$88.00</td>
+                    <td id="subtotal">${{ this.subtotal }}</td>
                 </tr>
                 <tr>
                     <td>Shipping</td>
                     <td>Free shipping</td>
                 </tr>
             </table><br>
-            <button type="button">Place Order</button>
+            <button (click)="clearCart()" type="button">Place Order</button>
         </div><!-- Yorder -->
     </div>
+</div>
+
+<div class="completed" *ngIf="this.bought" class="contents">
+    <h3>You have successfully completed your order!</h3>
 </div>

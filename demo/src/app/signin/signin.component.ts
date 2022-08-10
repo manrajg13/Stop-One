@@ -1,6 +1,8 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { ObjectId } from 'mongodb';
 import { Signin } from 'src/app/models/signin.model';
 import { SigninService } from 'src/app/services/signin.service';
+import { UsersService } from '../services/users.service';
 
 @Component({
   selector: 'app-signin',
@@ -9,15 +11,17 @@ import { SigninService } from 'src/app/services/signin.service';
 })
 export class SigninComponent implements OnInit {
 
+  usern: string = '';
+
   signin: Signin = {
     username: '',
     password: ''
   };
 
-  constructor(public signinService: SigninService) {}
+  constructor(public signinService: SigninService, public userService: UsersService) {}
 
   ngOnInit(): void { }
-
+  
   signedIn(): void {
     const data = {
       username: this.signin.username,
@@ -32,5 +36,4 @@ export class SigninComponent implements OnInit {
     localStorage.setItem("currUser", '' + this.signin.username);
     this.signinService.login();
   }
-
 }

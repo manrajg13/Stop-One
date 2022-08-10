@@ -7,7 +7,6 @@ import { AboutComponent } from './about/about.component';
 import { SettingsComponent } from './settings/settings.component';
 import { AdminComponent } from './admin/admin.component';
 import { CategoriesComponent } from './categories/categories.component';
-import { CheckoutComponent } from './checkout/checkout.component';
 import { PaymentComponent } from './payment/payment.component';
 import { ContactComponent } from './contact/contact.component';
 import { UserComponent } from './user/user.component';
@@ -24,7 +23,6 @@ const routes: Routes = [
   { path: 'settings', component: SettingsComponent},
   { path: 'admin', component: AdminComponent},
   { path: 'categories', component: CategoriesComponent},
-  { path: 'checkout', component: CheckoutComponent},
   { path: 'payment', component: PaymentComponent},
   { path: 'contact', component: ContactComponent},
   { path: 'user', component: UserComponent},
