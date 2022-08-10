@@ -37,10 +37,6 @@ export class HomeComponent implements OnInit {
         });
   }
 
-  getProduct(product: Products){
-    
-  }
-
   addProduct(){
     const data = {
       name: this.product.name,
@@ -57,8 +53,6 @@ export class HomeComponent implements OnInit {
         error => {
           console.log(error);
         });
-    window.location.reload();   
     
   }
-
 }
