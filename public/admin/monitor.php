@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<meta name="author" content=""/>
+		<meta name="author" content="Adam Youssef, Blair Cosgrove, Arseniy Chertov, Keyang Gao, Manraj Gill">
 		<meta name="description" content="Monitor file to display the status of the server."/>
 		<meta http-equiv="X-UA-Comptaible" content="ie=edge"/>
 		<link rel="stylesheet" href="../style.css"/>
