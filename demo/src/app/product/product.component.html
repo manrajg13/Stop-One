@@ -2,7 +2,7 @@
     <h1>Products List</h1>
     <ul class="list-group">
         <li
-            class="list-group-item"
+            class="button"
             *ngFor="let product of products; let i = index"
             (click)="getProduct(product)"
         >
@@ -12,5 +12,7 @@
             <br>
             Description: {{ product.description }}
         </li>
-    </ul>    
+    </ul>
+    <a id="addProduct" *ngIf="" (click)="addProduct()"><button>Add Product</button></a>
+
 </div>

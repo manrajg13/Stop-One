@@ -1,21 +1,21 @@
 <div>
-    <form>
+    <form *ngIf="!signinService.loggedIn">
         <div>
-            <div class="submit-form">
+            <div class="login">
                 <h2>Sign in</h2>
                 <label>Username : </label>
                 <input type="text" placeholder="Enter Username" name="username" required [(ngModel)]="signin.username"><br>
                 <label>Password : </label>
                 <input type="password" placeholder="Enter Password" name="password" required [(ngModel)]="signin.password"><br><br>
                 <button (click)="signedIn()" class="login-button" type="submit">Login</button><br>
-                <input type="checkbox" checked="checked">Remember me&emsp;&emsp;&emsp;&emsp;
-                Forgot <a href="#"> password? </a>
+                <input type="checkbox" checked="checked">Remember me <span>Forgot <a href="#"> password? </a></span>
             </div>  
             <br>
             <div class="register">
                 <hr><p>New to Stop One?</p><hr><br>
             </div>
-            <a href="../sign_up/signup.html"><button class="register-button" type="button" formnovalidate="formnovalidate">Create your Stop One account</button></a>
+            <a href="../signup"><button class="register-button" type="button" formnovalidate="formnovalidate">Create your Stop One account</button></a>
         </div>
     </form>
+    <div class="contents" *ngIf="signinService.loggedIn"><h3>You have logged in successfully!</h3></div>
 </div>

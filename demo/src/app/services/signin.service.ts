@@ -8,9 +8,18 @@ const baseUrl = 'http://localhost:3000/signin';
   providedIn: 'root'
 })
 export class SigninService {
+  loggedIn: boolean = false;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
+
   create(data: any): Observable<any> {
     return this.http.post(baseUrl, data);
+  }
+
+  logout () {
+    this.loggedIn = false;
+  }
+  login () {
+    this.loggedIn = true;
   }
 }
