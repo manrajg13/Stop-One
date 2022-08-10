@@ -17,7 +17,6 @@ app.use(cors(corsOptions));
 app.use(bodyParser.json());
 //Use body parser for form data
 app.use(express.urlencoded({extended: true}));
-app.set("view engine", "pug");
 
 //Serve static files from public (for the add page)
 app.use(express.static("public"));

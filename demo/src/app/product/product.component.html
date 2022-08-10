@@ -13,6 +13,47 @@
             Description: {{ product.description }}
         </li>
     </ul>
-    <a id="addProduct" *ngIf="" (click)="addProduct()"><button>Add Product</button></a>
+    <a id="addButton" *ngIf="!signinService.loggedIn">
+        <div class="submit-form">
+            <div *ngIf="!submitted">
+                <div class="form-group">
+                <label for="name">Name</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    required
+                    [(ngModel)]="product.name"
+                    name="name"
+                />
+                </div>
 
+                <div class="form-group">
+                    <label for="price">Price</label>
+                    <input
+                    type="text"
+                    class="form-control"
+                    id="price"
+                    required
+                    [(ngModel)]="product.price"
+                    name="price"
+                    />
+                </div>
+
+        
+                <div class="form-group">
+                <label for="description">Description</label>
+                <input
+                    class="form-control"
+                    id="description"
+                    required
+                    [(ngModel)]="product.description"
+                    name="description"
+                />
+              </div>
+              <br>
+              <button class="addButton" (click)="addProduct()">Add Product</button>
+            </div>  
+        </div>
+    </a>    
 </div>

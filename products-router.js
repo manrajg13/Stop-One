@@ -63,7 +63,7 @@ function readProduct(req, res, next){
 			res.status(404).send("That ID does not exist in the database.");
 			return;
 		}
-		res.status(200).render("product", {product: result});
+		res.status(200);
 	});
 }
 

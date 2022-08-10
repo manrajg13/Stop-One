@@ -14,6 +14,13 @@ export class ProductComponent implements OnInit {
 
   constructor(public productService: ProductService, public signinService: SigninService) { }
 
+  product: Products = {
+    name: '',
+    description: '',
+    price: 0
+  };
+  submitted = false;
+
   ngOnInit(): void {
     this.listProducts();
   }
@@ -35,7 +42,21 @@ export class ProductComponent implements OnInit {
   }
 
   addProduct(){
-    
+    const data = {
+      name: this.product.name,
+      password: this.product.price,
+      description: this.product.description
+    };
+
+    this.productService.create(data)
+      .subscribe(
+        response => {
+          console.log(response);
+          this.submitted = true;
+        },
+        error => {
+          console.log(error);
+        });
   }
 
 }

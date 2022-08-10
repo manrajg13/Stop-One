@@ -1,8 +1,8 @@
-import { Decimal128 } from "mongodb";
+import { Decimal128, IntegerType } from "mongodb";
 
 export class Products {
     id_?: any;
     name?: string;
-    price?: Decimal128;
+    price?: IntegerType;
     description?: string
 }
