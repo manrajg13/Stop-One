@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
     this.listProducts();
   }
 
-  listProducts(){
+  listProducts() {
     this.productService.getAll()
       .subscribe(
         data => {
@@ -37,11 +37,11 @@ export class HomeComponent implements OnInit {
         });
   }
 
-  getProduct(product: Products){
-    
+  getProduct(product: Products) {
+
   }
 
-  addProduct(){
+  addProduct() {
     const data = {
       name: this.product.name,
       price: this.product.price,
@@ -57,8 +57,6 @@ export class HomeComponent implements OnInit {
         error => {
           console.log(error);
         });
-    window.location.reload();   
-    
   }
 
 }
