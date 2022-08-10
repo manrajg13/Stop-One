@@ -1,11 +1,7 @@
 <div class="contents">
     <h1>Products List</h1>
     <ul class="list-group">
-        <li
-            class="button"
-            *ngFor="let product of products; let i = index"
-            (click)="getProduct(product)"
-        >
+        <li class="button" *ngFor="let product of products; let i = index" (click)="getProduct(product)">
             {{ product.name }}
             <br>
             Price: ${{ product.price }}
@@ -56,4 +52,5 @@
             </div>  
         </div>
     </a>    
+    <a id="addProduct" *ngIf="" (click)="addProduct()"><button>Add Product</button></a>
 </div>
