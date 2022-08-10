@@ -11,7 +11,7 @@
 
     <a id="sign_in" *ngIf="!signinService.loggedIn" routerLink="signin"><button>SIGN IN</button></a>
     <a id="sign_up" *ngIf="!signinService.loggedIn" routerLink="signup"><button>SIGN UP</button></a>
-    <a id="sign_out" *ngIf="signinService.loggedIn" routerLink="signin" (click)="signinService.logout()"><button>SIGN OUT</button></a>
+    <a id="sign_out" *ngIf="signinService.loggedIn" routerLink="home" (click)="signinService.logout()"><button>SIGN OUT</button></a>
   </nav>
   <router-outlet></router-outlet>
 </div>

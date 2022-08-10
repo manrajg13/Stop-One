@@ -1,5 +1,5 @@
 <div>
-    <form>
+    <form *ngIf="!signinService.loggedIn">
         <div>
             <div class="register">
                     <h2>Sign up</h2>
@@ -13,4 +13,5 @@
             </div>
         </div>
     </form>
+    <div class="contents" *ngIf="signinService.loggedIn"><h3>Account created successfully!</h3></div>
 </div>

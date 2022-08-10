@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Signup } from 'src/app/models/signup.model';
 import { SignupService } from 'src/app/services/signup.service';
+import { SigninService } from 'src/app/services/signin.service';
+
 
 @Component({
   selector: 'app-signup',
@@ -13,7 +15,7 @@ export class SignupComponent implements OnInit {
     password: '',
     email: ''
   };
-  constructor(private signupService: SignupService) { }
+  constructor(private signupService: SignupService, public signinService: SigninService) { }
   ngOnInit(): void {
   }
   signUp(): void{
@@ -28,7 +30,7 @@ export class SignupComponent implements OnInit {
         }
     );
     alert("User has been registered successfully!");
-    window.location.href = "home";
+    this.signinService.login();
   }
 
 }
