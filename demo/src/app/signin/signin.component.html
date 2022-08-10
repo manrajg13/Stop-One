@@ -1,10 +1,10 @@
 <div>
-    <form *ngIf="signinService.getlogin() == 'false' || signinService.getlogin() == ''">
+    <form *ngIf="signinService.getlogin() != 'true'">
         <div>
             <div class="login">
                 <h2>Sign in</h2>
                 <label>Username : </label>
-                <input type="text" placeholder="Enter Username" name="username" required [(ngModel)]="signin.username"><br>
+                <input id="username" type="text" placeholder="Enter Username" name="username" required [(ngModel)]="signin.username"><br>
                 <label>Password : </label>
                 <input type="password" placeholder="Enter Password" name="password" required [(ngModel)]="signin.password"><br><br>
                 <button (click)="signedIn()" class="login-button" type="submit">Login</button><br>
