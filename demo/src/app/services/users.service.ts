@@ -10,8 +10,8 @@ const baseUrl = 'http://localhost:3000/users';
 })
 export class UsersService {
   constructor(private http: HttpClient) { }
-  get(id: any): Observable<Users> {
-    return this.http.get(`${baseUrl}/${id}`);
+  get(_id: any): Observable<Users> {
+    return this.http.get(`${baseUrl}/${_id}`);
   }
   create(data: any): Observable<any> {
     return this.http.post(baseUrl, data);

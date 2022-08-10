@@ -19,6 +19,7 @@ const routes: Routes = [
   { path: 'signin', component: SigninComponent},
   { path: 'signup', component: SignupComponent},
   { path: 'users', component: SignupComponent},
+  { path: 'user/:_id', component: ProductComponent},
   { path: 'about', component: AboutComponent},
   { path: 'settings', component: SettingsComponent},
   { path: 'admin', component: AdminComponent},
