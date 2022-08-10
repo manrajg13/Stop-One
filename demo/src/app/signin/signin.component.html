@@ -1,5 +1,5 @@
 <div>
-    <form *ngIf="!signinService.loggedIn">
+    <form *ngIf="signinService.getlogin() == 'false'">
         <div>
             <div class="login">
                 <h2>Sign in</h2>
@@ -17,5 +17,5 @@
             <a href="../signup"><button class="register-button" type="button" formnovalidate="formnovalidate">Create your Stop One account</button></a>
         </div>
     </form>
-    <div class="contents" *ngIf="signinService.loggedIn"><h3>You have logged in successfully!</h3></div>
+    <div class="contents" *ngIf="signinService.getlogin() == 'true'"><h3>You have logged in successfully!</h3></div>
 </div>
