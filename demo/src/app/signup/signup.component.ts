@@ -29,7 +29,8 @@ export class SignupComponent implements OnInit {
           console.log(error);
         }
     );
-    alert("User has been registered successfully!");
+    
+    localStorage.setItem("currUser", '' + this.signup.username);
     this.signinService.login();
   }
 
