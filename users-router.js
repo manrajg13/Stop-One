@@ -12,7 +12,7 @@ router.use(bodyParser.json());
 
 router.post("/", createNewUser);
 
-router.get("/:uid", readUser);
+router.get("/:_id", readUser);
 
 function createNewUser(req, res, next){
 	
@@ -31,17 +31,12 @@ function createNewUser(req, res, next){
 }
 
 function readUser(req, res, next){
-	let id = req.params.uid;	
-	let oid;
+	let id = req.params._id;
+	let oid = new ObjectID(id);;
 
-	try{
-		oid = new ObjectID(id);
-	}catch{
-		res.status(404).send("That ID does not exist.");
-		return;
-	}
-	console.log("id: " + id);
+	console.log("read: " + id);
 	mongoose.connection.db.collection("users").findOne({"_id": oid}, function(err, result){
+		console.log("Result: " + result.username);
 		if(err){
 			res.status(500).send("Error reading database.");
 			return;
@@ -50,7 +45,7 @@ function readUser(req, res, next){
 			res.status(404).send("That ID does not exist in the database.");
 			return;
 		}
-		res.status(200).render("user", {user: result});
+		res.send(result);
 	});
 }
 
