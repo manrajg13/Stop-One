@@ -1,12 +1,16 @@
 <div class="contents">
-    <h1>Product Name</h1><img class="product-img" src="link" />
-    <div class="price">
-        <h2>price
-            <button class="purchase" type="submit">Add to Cart</button>
-        </h2>
-    </div>
-    <hr />
-    <p>Description</p>
-    <button class="purchase" type="submit">Report Product</button>
+    <h1>Products List</h1>
+    <ul class="list-group">
+        <li
+            class="list-group-item"
+            *ngFor="let product of products; let i = index"
+            (click)="getProduct(product)"
+        >
+            {{ product.name }}
+            <br>
+            Price: ${{ product.price }}
+            <br>
+            Description: {{ product.description }}
+        </li>
+    </ul>    
 </div>
-<script src="../script.js"></script>

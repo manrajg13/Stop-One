@@ -21,28 +21,25 @@ function listProducts(req, res, next){
 			return;
 		}
 		console.log(result);
-		res.status(200);
+		res.send(result);
 	});
 }
 
 function createNewProduct(req, res, next){
-	let product = {};
 	
-	product.name = req.body.name;
-	product.price = Number(req.body.price);
-	product.stock = Number(req.body.stock);
-	product.hidden = false;
-	product.comments = "";
+	let product = {name: req.body.name, price: Number(req.body.price), description: req.body.description};
 	
 	mongoose.connection.db.collection("products").insertOne(product, function(err, result){
 		if(err){
 			res.status(500).send("Error saving to database.");
 			return;
 		}
-		let newID = result.insertedId;
 		
-		//Redirect to the view page for the new product
-		res.redirect("http://localhost:3000/products/" + newID);
+		if(result){
+			console.log("Product: " + product.name);
+			res.status(200);
+		}
+		
 	});
 }
 
