@@ -58,6 +58,6 @@ export class HomeComponent implements OnInit {
           console.log(error);
         });
 
-
+    window.location.reload();
   }
 }
