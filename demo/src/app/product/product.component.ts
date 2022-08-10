@@ -44,7 +44,7 @@ export class ProductComponent implements OnInit {
   addProduct(){
     const data = {
       name: this.product.name,
-      password: this.product.price,
+      price: this.product.price,
       description: this.product.description
     };
 
@@ -57,6 +57,8 @@ export class ProductComponent implements OnInit {
         error => {
           console.log(error);
         });
+    window.location.reload();   
+    
   }
 
 }
