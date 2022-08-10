@@ -1,58 +1,10 @@
-<div class="contents">
-    <h1>Products List</h1>
-    <ul class="list-group">
-        <li class="button" *ngFor="let product of products; let i = index" (click)="getProduct(product)">
-            {{ product.name }}
-            <br>
-            Price: ${{ product.price }}
-            <br>
-            Description: {{ product.description }}
-        </li>
-    </ul>
+<div>
+    <div *ngIf="product.id_">
+        <h1 type="text" id="product-name" name="name">Name</h1>
+    </div>
 
-    <a id="addButton" *ngIf="!signinService.loggedIn">
-        <div class="submit-form">
-            <div *ngIf="!submitted">
-                <div class="form-group">
-                <label for="name">Name</label>
-                <input
-                    type="text"
-                    class="form-control"
-                    id="name"
-                    required
-                    [(ngModel)]="product.name"
-                    name="name"
-                />
-                </div>
-
-                <div class="form-group">
-                    <label for="price">Price</label>
-                    <input
-                    type="text"
-                    class="form-control"
-                    id="price"
-                    required
-                    [(ngModel)]="product.price"
-                    name="price"
-                    />
-                </div>
-
-        
-                <div class="form-group">
-                <label for="description">Description</label>
-                <input
-                    class="form-control"
-                    id="description"
-                    required
-                    [(ngModel)]="product.description"
-                    name="description"
-                />
-              </div>
-              <br>
-              <button class="addButton" (click)="addProduct()">Add Product</button>
-            </div>  
-        </div>
-    </a>    
-
-    <a id="addProduct" *ngIf="" (click)="addProduct()"><button>Add Product</button></a>
+    <div *ngIf="!product.id_">
+        <br />
+        <p>Cannot access this Product...</p>
+    </div>
 </div>

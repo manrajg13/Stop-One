@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Products } from 'src/app/models/products.model';
 import { ProductService } from 'src/app/services/products.service';
 import { SigninService } from '../services/signin.service';
+import { ActivatedRoute } from '@angular/router';
+import { ObjectId } from 'mongoose';
 
 @Component({
   selector: 'app-product',
@@ -12,53 +14,30 @@ export class ProductComponent implements OnInit {
 
   products?: Products[];
 
-  constructor(public productService: ProductService, public signinService: SigninService) { }
+  constructor(public productService: ProductService, public signinService: SigninService, private route: ActivatedRoute) { }
 
   product: Products = {
+    id_: '',
     name: '',
     description: '',
     price: 0
   };
-  submitted = false;
 
   ngOnInit(): void {
-    this.listProducts();
+    this.getProduct(this.route.snapshot.params['id_']);
   }
 
-  listProducts(){
-    this.productService.getAll()
+  getProduct(id_: ObjectId){
+    console.log(id_);
+    this.productService.get(id_)
       .subscribe(
         data => {
-          this.products = data;
+          this.product = data;
           console.log(data);
         },
         error => {
           console.log(error);
         });
-  }
-
-  getProduct(product: Products){
-    
-  }
-
-  addProduct(){
-    const data = {
-      name: this.product.name,
-      price: this.product.price,
-      description: this.product.description
-    };
-
-    this.productService.create(data)
-      .subscribe(
-        response => {
-          console.log(response);
-          this.submitted = true;
-        },
-        error => {
-          console.log(error);
-        });
-    window.location.reload();   
-    
   }
 
 }

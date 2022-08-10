@@ -13,7 +13,6 @@ import { ContactComponent } from './contact/contact.component';
 import { UserComponent } from './user/user.component';
 import { ProductComponent } from './product/product.component';
 
-
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
   { path: 'home', component: HomeComponent},
@@ -28,6 +27,7 @@ const routes: Routes = [
   { path: 'payment', component: PaymentComponent},
   { path: 'contact', component: ContactComponent},
   { path: 'user', component: UserComponent},
+  { path: 'products', component: ProductComponent},
   { path: 'products', component: ProductComponent}
 ];
 

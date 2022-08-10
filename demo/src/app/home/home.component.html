@@ -8,8 +8,8 @@
     <h1>Products List</h1>
 
     <div class="grid">
-        <div class="container" *ngFor="let product of products; let i = index" (click)="getProduct(product)">
-            <a href="">
+        <div class="container" *ngFor="let product of products; let i = index">
+            <a href='/products/${product.id_}'>
                 <div class="cell"><span style="float: left;">${{ product.price }}</span><span>{{ product.name }}</span>
                 </div>
                 <img id="test" src="../assets/background_images/athletics.jpg">
@@ -17,7 +17,7 @@
         </div>
     </div>
 
-    <div id="addButton" *ngIf="!signinService.loggedIn">
+    <div id="addButton" *ngIf="signinService.loggedIn">
         <div class="submit-form">
             <div *ngIf="!submitted">
                 <div class="form-group">
