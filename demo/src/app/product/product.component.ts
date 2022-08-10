@@ -3,7 +3,7 @@ import { Products } from 'src/app/models/products.model';
 import { ProductService } from 'src/app/services/products.service';
 import { SigninService } from '../services/signin.service';
 import { ActivatedRoute } from '@angular/router';
-import { ObjectId } from 'mongoose';
+import { ObjectId } from 'mongodb';
 
 @Component({
   selector: 'app-product',
@@ -17,19 +17,17 @@ export class ProductComponent implements OnInit {
   constructor(public productService: ProductService, public signinService: SigninService, private route: ActivatedRoute) { }
 
   product: Products = {
-    id_: '',
     name: '',
     description: '',
     price: 0
   };
 
   ngOnInit(): void {
-    this.getProduct(this.route.snapshot.params['id_']);
+    this.getProduct(this.route.snapshot.params['_id']);
   }
 
-  getProduct(id_: ObjectId){
-    console.log(id_);
-    this.productService.get(id_)
+  getProduct(_id: ObjectId){
+    this.productService.get(_id)
       .subscribe(
         data => {
           this.product = data;
