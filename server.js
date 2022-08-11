@@ -42,6 +42,11 @@ app.post("/signin", function(req, res, next){
 	});
 });
 
+app.get('/*', function(req,res) {
+
+  res.sendFile(path.join(__dirname+'/dist/stop-one/index.html'));
+});
+
 mongoose.connect(uri, {useNewUrlParser: true});
 db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
