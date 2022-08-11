@@ -43,8 +43,7 @@ app.post("/signin", function(req, res, next){
 });
 
 app.get('/*', function(req,res) {
-
-  res.sendFile(path.join(__dirname+'/dist/stop-one/index.html'));
+  res.sendFile(path.join(__dirname+'demo/dist/stop-one/index.html'));
 });
 
 mongoose.connect(uri, {useNewUrlParser: true});
