@@ -12,6 +12,6 @@ Navigate to `http://localhost:4200/` to view the website.
 
 ## Dependencies
 
-`Node.js'
+`Node.js`
 
-'Angular cli'
+`Angular CLI`
