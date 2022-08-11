@@ -140,6 +140,10 @@ input {
 	width: 100%;
 }
 
+#test {
+	width: 100%;
+}
+
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 	.container {
 		display: block;

@@ -1,12 +1,12 @@
 <div class="contents">
-    <div *ngIf="product._id && !this.bought" >
+    <div *ngIf="product._id && !this.bought && !reported" >
         <h1>{{ product.name }}</h1>
         <img alt="product-img" class="product-img" src="../assets/background_images/athletics.jpg">
         <hr />
         <h1>${{ product.price }}</h1>
         <p>{{ product.description }}</p>
         <button (click)="addSubtotal()" class="purchase" type="submit">Purchase</button>
-        <button class="report" type="submit">Report Product</button>
+        <button (click)="reportProduct()" class="report" type="submit">Report Product</button>
     </div>
 
     <div *ngIf="!product._id">
@@ -16,5 +16,9 @@
 
     <div *ngIf="this.bought">
         <h3>{{ product.name }} has been added to your cart</h3>
+    </div>
+
+    <div *ngIf="this.reported">
+        <h3>{{ product.name }} has been reported.</h3>
     </div>
 </div>

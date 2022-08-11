@@ -15,12 +15,14 @@ export class ProductComponent implements OnInit {
 
   cost: number;
   bought: boolean;
+  reported: boolean;
 
   products?: Products[];
 
   constructor(public productService: ProductService, public signinService: SigninService, private route: ActivatedRoute) { 
     this.cost = 0;
     this.bought = false;
+    this.reported = false;
   }
 
   product: Products = {
@@ -49,6 +51,10 @@ export class ProductComponent implements OnInit {
     this.cost += this.product.price!;
     localStorage.setItem("purchased", "" + this.cost);
     this.bought = true;
+  }
+
+  reportProduct() {
+    this.reported = true;
   }
 
 }
