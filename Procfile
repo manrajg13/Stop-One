@@ -1,1 +1,1 @@
-web: ./demo npm start
+web: cd demo && npm start
