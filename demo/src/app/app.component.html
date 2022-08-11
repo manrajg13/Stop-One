@@ -1,13 +1,41 @@
 <!--Navbar-->
 <div class="navbar">
-  <nav>
+  <nav *ngIf="getTheme() == 'light'">
     <a routerLink="home"><img alt="StopOneLogo" class="logo" src="../assets/logo.png"></a>
     <div class="search-container">
     </div>
 
-    <a id="user" *ngIf="signinService.getlogin() == 'true'" routerLink="user"><button id="account"><i class="fa fa-user"></i></button></a>
-    <a routerLink="settings"><button id="settings"><i class="fa fa-gear"></i></button></a>
-    <a routerLink="payment"><button id="cart"><i class="fa fa-shopping-cart"></i></button></a>
+    <a id="user" *ngIf="signinService.getlogin() == 'true'" routerLink="user"><button id="account" style="width: 80px;">ACCOUNT</button></a>
+    <a routerLink="settings"><button style="width: 80px;">SETTINGS</button></a>
+    <a routerLink="payment"><button>CART</button></a>
+
+    <a id="sign_in" *ngIf="signinService.getlogin() != 'true'" routerLink="signin"><button>SIGN IN</button></a>
+    <a id="sign_up" *ngIf="signinService.getlogin() != 'true'" routerLink="signup"><button>SIGN UP</button></a>
+    <a id="sign_out" *ngIf="signinService.getlogin() == 'true'" routerLink="home" (click)="signinService.logout()"><button>SIGN OUT</button></a>
+  </nav>
+
+  <nav *ngIf="getTheme() == 'dark'" id="nav2">
+    <a routerLink="home"><img alt="StopOneLogo" class="logo" src="../assets/logo.png"></a>
+    <div class="search-container">
+    </div>
+
+    <a id="user" *ngIf="signinService.getlogin() == 'true'" routerLink="user"><button id="account" style="width: 80px;">ACCOUNT</button></a>
+    <a routerLink="settings"><button style="width: 80px;">SETTINGS</button></a>
+    <a routerLink="payment"><button>CART</button></a>
+
+    <a id="sign_in" *ngIf="signinService.getlogin() != 'true'" routerLink="signin"><button>SIGN IN</button></a>
+    <a id="sign_up" *ngIf="signinService.getlogin() != 'true'" routerLink="signup"><button>SIGN UP</button></a>
+    <a id="sign_out" *ngIf="signinService.getlogin() == 'true'" routerLink="home" (click)="signinService.logout()"><button>SIGN OUT</button></a>
+  </nav>
+
+  <nav *ngIf="getTheme() == 'green'" id="nav3">
+    <a routerLink="home"><img alt="StopOneLogo" class="logo" src="../assets/logo.png"></a>
+    <div class="search-container">
+    </div>
+
+    <a id="user" *ngIf="signinService.getlogin() == 'true'" routerLink="user"><button id="account" style="width: 80px;">ACCOUNT</button></a>
+    <a routerLink="settings"><button style="width: 80px;">SETTINGS</button></a>
+    <a routerLink="payment"><button>CART</button></a>
 
     <a id="sign_in" *ngIf="signinService.getlogin() != 'true'" routerLink="signin"><button>SIGN IN</button></a>
     <a id="sign_up" *ngIf="signinService.getlogin() != 'true'" routerLink="signup"><button>SIGN UP</button></a>

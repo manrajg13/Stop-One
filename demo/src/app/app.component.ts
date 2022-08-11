@@ -10,8 +10,16 @@ import { SigninService } from './services/signin.service';
 
 export class AppComponent implements OnInit {
   title = 'Stop-One';
+  theme: string;
 
-  constructor (public signinService: SigninService) { }
+  constructor (public signinService: SigninService) {
+    this.theme = localStorage.getItem("theme")!;
+  }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+  }
+  
+  getTheme() {
+    return localStorage.getItem("theme")!;
+  }
 }

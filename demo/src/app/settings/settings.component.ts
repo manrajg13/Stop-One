@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./settings.component.css']
 })
 export class SettingsComponent implements OnInit {
-
-  constructor() { }
+  theme: string;
+  constructor() {
+    this.theme = "light";
+  }
 
   ngOnInit(): void {
   }
 
+  saveSettings () {
+    var e = (document.getElementById("theme")) as HTMLSelectElement;
+    localStorage.setItem("theme", "" + e.value);
+  }
 }

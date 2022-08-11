@@ -3,8 +3,8 @@ nav {
 	display: flex;
 	height: 40px;
 	justify-content: center;
-  	align-items: center;
-  	border-bottom: 1px solid #adadad;
+	align-items: center;
+	border-bottom: 1px solid #adadad;
 }
 
 nav button {
@@ -69,4 +69,25 @@ a p {
 	background-color: #b4154f;
 	width: 30px;
 	height: 100%;
+}
+
+#nav2 {
+	background-color: black;
+	padding: 7px;
+	display: flex;
+	height: 40px;
+	justify-content: center;
+	align-items: center;
+	border-bottom: 1px solid #adadad;
+}
+
+#nav3 {
+	background-color: green;
+	padding: 7px;
+	display: flex;
+	height: 40px;
+	justify-content: center;
+	align-items: center;
+	border-bottom: 1px solid #adadad;
+
 }

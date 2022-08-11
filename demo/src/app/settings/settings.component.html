@@ -11,10 +11,10 @@
                 </select><br><br>
 
                 <label for="theme">Theme&emsp;&emsp;</label>
-                <select name="theme" id="ads">
-                    <option value="enable">Dark</option>
-                    <option value="disable">Light</option>
-                    <option value="disable">Green</option>
+                <select id="theme" name="theme">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                    <option value="green">Green</option>
                 </select><br><br>
 
                 <label for="ads">Personalized Advertising&emsp;&emsp;</label>
@@ -25,12 +25,12 @@
 
                 <label for="ads">Language&emsp;&emsp;</label>
                 <select name="ads" id="ads">
-                    <option value="enable">English</option>
-                    <option value="disable">French</option>
-                    <option value="disable">Spanish</option>
+                    <option value="eng">English</option>
+                    <option value="fr">French</option>
+                    <option value="spn">Spanish</option>
                 </select><br><br>
 
-                <button class="login-button" type="submit">Save Settings</button><br><br><br>
+                <button class="login-button" type="submit" (click)="saveSettings()">Save Settings</button><br><br><br>
             </div>
             <br>
         </div>
