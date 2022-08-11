@@ -20,6 +20,7 @@
     <div id="addButton" *ngIf ="signinService.getlogin() == 'true'">
         <div class="submit-form">
             <div *ngIf="!submitted">
+                <p>Add Product</p><br><br>
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" class="form-control" id="name" required [(ngModel)]="product.name" name="name" />

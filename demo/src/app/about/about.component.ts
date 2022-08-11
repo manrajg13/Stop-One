@@ -20,7 +20,7 @@ export class AboutComponent implements OnInit {
         }).then(function(response) {
             var div = document.createElement("div")
             div.innerHTML = "Weather in Windsor<br>" + response.main.temp + " Degrees - " + response.weather[0].description;
-            document.body.appendChild(div);
+            document.body.getElementsByClassName("contents")[0].appendChild(div);
         });
   }
 

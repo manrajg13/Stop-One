@@ -23,6 +23,12 @@ a p {
 	padding: 0px;
 }
 
+p {
+	padding: 0px;
+	margin: 0px;
+	float: left;
+}
+
 .top {
 	margin-top: 20px;
 	height: 30px;
@@ -113,8 +119,10 @@ a:hover {
 }
 
 .submit-form {
-	display: flex;
-	justify-content: center;
+	margin: auto;
+	border: 1px solid gray;
+	padding: 8px;
+	width: 30%;
 }
 
 input {
@@ -129,6 +137,7 @@ input {
 	border: 1px solid #adadad;
 	border: none;
 	padding: 15px;
+	width: 100%;
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
