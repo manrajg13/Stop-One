@@ -2,6 +2,10 @@ p {
 	font-weight: normal;
 }
 
+h3 {
+	text-align: center;
+}
+
 .product-img {
 	width: 50%;
 }

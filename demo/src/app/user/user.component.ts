@@ -13,6 +13,7 @@ import { ObjectId } from 'mongodb';
 export class UserComponent implements OnInit {
 
   usern: string;
+  reported: boolean;
 
   user: Users = {
     username: '',
@@ -23,6 +24,7 @@ export class UserComponent implements OnInit {
   constructor(public usersService: UsersService, public signinService: SigninService, private route: ActivatedRoute) { 
     console.log(localStorage.getItem("currUser"));
     this.usern = "" + localStorage.getItem("currUser");
+    this.reported = false;
   }
 
   ngOnInit(): void {
@@ -39,5 +41,9 @@ export class UserComponent implements OnInit {
         error => {
           console.log(error);
         });
+  }
+
+  reportUser() {
+    this.reported = true;
   }
 }

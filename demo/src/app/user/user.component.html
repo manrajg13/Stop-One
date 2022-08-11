@@ -1,8 +1,13 @@
-<div>
-    <div class="contents">
+<div class="contents">
+    <div *ngIf="!this.reported">
         <h1 [innerHTML]="usern"></h1>
         <img alt="user-img" class="user-img" src="../assets/background_images/athletics.jpg">
         <hr />
-        <button class="purchase" type="submit">Report User</button>
+        <button class="purchase" type="submit" (click)="reportUser()">Report User</button>
+    </div>
+
+    <div *ngIf="this.reported" style="text-align: center;">
+        <br>
+        <span [innerHTML]="usern"></span><span> has been reported.</span>
     </div>
 </div>

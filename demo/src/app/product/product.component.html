@@ -1,5 +1,5 @@
-<div>
-    <div *ngIf="product._id" class="contents">
+<div class="contents">
+    <div *ngIf="product._id && !this.bought" >
         <h1>{{ product.name }}</h1>
         <img alt="product-img" class="product-img" src="../assets/background_images/athletics.jpg">
         <hr />
@@ -9,8 +9,12 @@
         <button class="report" type="submit">Report Product</button>
     </div>
 
-    <div *ngIf="!product._id" class="contents">
+    <div *ngIf="!product._id">
         <br />
         <p>No product was found...</p>
+    </div>
+
+    <div *ngIf="this.bought">
+        <h3>{{ product.name }} has been added to your cart</h3>
     </div>
 </div>
